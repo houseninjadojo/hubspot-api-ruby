@@ -28,7 +28,7 @@ jobs:
           ruby-version: ${{ matrix.ruby }}
       - name: Bundle
         env:
-          ACTIVE_SUPPORT_VERSION: ${{ matrix.rails }}
+          ACTIVE_SUPPORT_VERSION: ${{ matrix.active_support }}
         run: |
           export BUNDLE_GEMFILE="${GITHUB_WORKSPACE}/gemfiles/${ACTIVE_SUPPORT_VERSION}.gemfile"
           gem install bundler
