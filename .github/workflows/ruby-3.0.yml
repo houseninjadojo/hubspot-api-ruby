@@ -1,0 +1,41 @@
+name: Ruby 3.0.x
+
+on:
+  pull_request:
+    branches:
+      - master
+  push:
+    branches:
+      - master
+
+jobs:
+  activesupport_61:
+    name: ActiveSupport 6.1.x
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@master
+
+    - name: Setup Ruby
+      uses: actions/setup-ruby@v1
+      with:
+        version: 3.0.x
+
+    - uses: actions/cache@v1
+      id: bundle-61
+      with:
+        path: vendor/bundle
+        key: ${{ runner.os }}-${{ hashFiles('hubspot-api-ruby.gemspec') }}-${{ hashFiles('gemfiles/activesupport_6.1.gemfile') }}
+
+    - name: Install Dependencies
+      if: steps.bundle-61.outputs.cache-hit != 'true'
+      run: |
+        gem install bundler
+        bundle install --jobs=3 --retry=3 --path=vendor/bundle
+        bundle exec appraisal install
+      env:
+        BUNDLE_GEMFILE: gemfiles/activesupport_6.1.gemfile
+
+    - name: Tests
+      run: |
+        RUBYOPT='-W:deprecated' bundle exec appraisal rspec
