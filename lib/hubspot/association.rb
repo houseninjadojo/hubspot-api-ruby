@@ -4,12 +4,20 @@ class Hubspot::Association
   CONTACT_TO_DEAL = 4
   DEAL_TO_COMPANY = 5
   COMPANY_TO_DEAL = 6
+  DEAL_TO_ENGAGEMENT = 11
+  ENGAGEMENT_TO_DEAL = 12
+  DEAL_TO_LINE_ITEM = 19
+  LINE_ITEM_TO_DEAL = 20
   DEFINITION_TARGET_TO_CLASS = {
     2 => Hubspot::Contact,
     3 => Hubspot::Contact,
     4 => Hubspot::Deal,
     5 => Hubspot::Company,
-    6 => Hubspot::Deal
+    6 => Hubspot::Deal,
+    11 => Hubspot::Deal,
+    12 => Hubspot::Engagement,
+    19 => Hubspot::Deal,
+    20 => Hubspot::LineItem,
   }.freeze
 
   BATCH_CREATE_PATH = '/crm-associations/v1/associations/create-batch'
