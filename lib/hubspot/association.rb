@@ -1,3 +1,6 @@
+require 'hubspot/engagement'
+require 'hubspot/line_item'
+
 class Hubspot::Association
   COMPANY_TO_CONTACT = 2
   DEAL_TO_CONTACT = 3
