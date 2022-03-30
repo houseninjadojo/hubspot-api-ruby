@@ -29,6 +29,11 @@ module Hubspot
           [line_items, response["offset"], response["has-more"]]
         end
       end
+
+      def find_by_id(id)
+        response = Hubspot::Connection.get_json(FIND_PATH, id: id)
+        new(response)
+      end
     end
   end
 end
