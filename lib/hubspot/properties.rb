@@ -26,9 +26,17 @@ module Hubspot
         filter_results(response, :groupName, filter[:include], filter[:exclude])
       end
 
+      def find(path, property_name, opts={})
+        response = Hubspot::Connection.get_json(path, opts.merge({ property_name: property_name }))
+      end
+
       def groups(path, opts={}, filter={})
         response = Hubspot::Connection.get_json(path, opts)
         filter_results(response, :name, filter[:include], filter[:exclude])
+      end
+
+      def find_group(path, group_name, opts={})
+        response = Hubspot::Connection.get_json(path, opts.merge({ group_name: group_name }))
       end
 
       def create!(path, params={})
@@ -97,7 +105,7 @@ module Hubspot
 
       def valid_group_params(params)
         return {} if params.blank?
-        result = params.slice(*PROPERTY_SPECS[:group_field_names])
+        result = params.with_indifferent_access.slice(*PROPERTY_SPECS[:group_field_names])
         result['properties'] = valid_property_params(result['properties']) unless result['properties'].blank?
         result
       end

@@ -2,56 +2,75 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.hubapi.com/contacts/v1/contact/merge-vids/1/?hapikey=<HAPI_KEY>
+    uri: https://api.hubapi.com/contacts/v1/contact/merge-vids/1/
     body:
       encoding: UTF-8
       string: '{"vidToMerge":2}'
     headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
       Content-Type:
       - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 400
       message: Bad Request
     headers:
       Date:
-      - Sat, 04 May 2019 14:44:44 GMT
+      - Mon, 08 Aug 2022 14:51:03 GMT
       Content-Type:
       - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '166'
       Connection:
       - keep-alive
-      Set-Cookie:
-      - __cfduid=dd6e4c80e6fc76ce91df1bb171a75a8ef1556981084; expires=Sun, 03-May-20
-        14:44:44 GMT; path=/; domain=.hubapi.com; HttpOnly
-      X-Trace:
-      - 2B3419610968BDABD048CD6E59C94F6FE0D4E422C1000000000000000000
-      X-Hubspot-Ratelimit-Daily:
-      - '1000000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '979454'
-      X-Hubspot-Ratelimit-Secondly:
-      - '60'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '59'
-      Vary:
-      - Accept-Encoding
-      - Accept-Encoding
-      Access-Control-Allow-Credentials:
-      - 'false'
+      Cf-Ray:
+      - 7379116169c599b6-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - e9ceec74-86b6-4d64-bd62-045eb2c90f4a
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '248326'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '82'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '8'
+      X-Trace:
+      - 2BEEF0993907A26F99625C5F23103D47FB1CCE0ED2000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=spf9%2FkdvEYfauFYjrsEcy7EpNBGe3QaxYcKJJest0un%2FFpX3ws85jFHZ0cVW7ITE8I1AcYhE7uAw%2Ff8CUIQpLQealQODGWxwNGRzQSk4Y0o%2FP2ZzAceGX3YTbfdBy78KzSf%2FUph2rrDtJStN"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Cf-Ray:
-      - 4d1b41203ab1c1f2-IAD
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: UTF-8
-      string: '{"status":"error","message":"canonical vid is not a valid contact or
-        is already in the process of being merged","correlationId":"07183c3f-3867-4a1c-b264-c3680ed82231","requestId":"4a37890c8fc6c30556da6644b72f7e7b"}'
-    http_version: 
-  recorded_at: Sat, 04 May 2019 14:44:44 GMT
-recorded_with: VCR 4.0.0
+      string: '{"status":"error","message":"vid to merge is not a valid contact or
+        is already in the process of being merged","correlationId":"e9ceec74-86b6-4d64-bd62-045eb2c90f4a"}'
+  recorded_at: Mon, 08 Aug 2022 14:51:03 GMT
+recorded_with: VCR 6.0.0

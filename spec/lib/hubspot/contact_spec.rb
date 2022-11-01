@@ -1,7 +1,5 @@
 RSpec.describe Hubspot::Contact do
 
-  before{ Hubspot.configure(hapikey: 'demo') }
-
   it_behaves_like "a saveable resource", :contact do
     def set_property(contact)
       contact.firstname = "foobar"
@@ -35,7 +33,7 @@ RSpec.describe Hubspot::Contact do
       it 'raises an error' do
         expect {
           subject
-        }.to raise_error(Hubspot::RequestError, /contact does not exist/)
+        }.to raise_error(Hubspot::NotFoundError, /contact does not exist/)
       end
     end
   end
@@ -211,7 +209,7 @@ RSpec.describe Hubspot::Contact do
 
       let!(:contact1) { create :contact }
 
-      subject { contact1.merge(1) }
+      subject { contact1.merge(contact1.id) }
 
       it 'raises an error' do
         expect {

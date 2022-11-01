@@ -1,0 +1,35 @@
+name: tests
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        ruby:
+          - '2.7.x'
+          - '3.0.x'
+          - '3.1.x'
+        active_support:
+          - 'active_support_6.0.x'
+          - 'active_support_6.1.x'
+          - 'active_support_7.0.x'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Setup Ruby
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+      - name: Bundle
+        env:
+          ACTIVE_SUPPORT_VERSION: ${{ matrix.active_support }}
+        run: |
+          export BUNDLE_GEMFILE="${GITHUB_WORKSPACE}/gemfiles/${ACTIVE_SUPPORT_VERSION}.gemfile"
+          gem install bundler
+          bundle install --jobs 4 --retry 3
+      - name: Test
+        env:
+          HUBSPOT_PORTAL_ID: ${{ secrets.HUBSPOT_PORTAL_ID }}
+          HUBSPOT_HAPI_KEY: ${{ secrets.HUBSPOT_HAPI_KEY }}
+          HUBSPOT_ACCESS_TOKEN: ${{ secrets.HUBSPOT_ACCESS_TOKEN }}
+        run: RUBYOPT='-W:deprecated' bundle exec rspec

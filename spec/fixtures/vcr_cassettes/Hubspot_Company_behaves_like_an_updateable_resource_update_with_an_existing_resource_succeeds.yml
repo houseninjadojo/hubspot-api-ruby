@@ -1,103 +1,223 @@
 ---
 http_interactions:
 - request:
-    method: post
-    uri: https://api.hubapi.com/companies/v2/companies/?hapikey=<HAPI_KEY>
-    body:
-      encoding: UTF-8
-      string: '{"properties":[{"name":"name","value":"Leuschke-Watsica"},{"name":"domain","value":"hauck.io"}]}'
-    headers:
-      Content-Type:
-      - application/json
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Sat, 04 May 2019 14:43:51 GMT
-      Content-Type:
-      - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Set-Cookie:
-      - __cfduid=da52deca62846b3190d3e5d16cf70dfad1556981031; expires=Sun, 03-May-20
-        14:43:51 GMT; path=/; domain=.hubapi.com; HttpOnly
-      X-Trace:
-      - 2B871D90252309CC737785E093EDE77D673FD6AEB9000000000000000000
-      X-Hubspot-Ratelimit-Daily:
-      - '1000000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '979557'
-      X-Hubspot-Ratelimit-Secondly:
-      - '60'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '58'
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-      Server:
-      - cloudflare
-      Cf-Ray:
-      - 4d1b3fd80946cf54-IAD
-    body:
-      encoding: UTF-8
-      string: '{"portalId":62515,"companyId":1897466915,"isDeleted":false,"properties":{"website":{"value":"hauck.io","timestamp":1556981031717,"source":"CALCULATED","sourceId":null,"versions":[{"name":"website","value":"hauck.io","timestamp":1556981031717,"source":"CALCULATED","sourceVid":[],"requestId":"b0cbb498-19a7-4dfd-8740-1051f87157c0"}]},"hs_lastmodifieddate":{"value":"1556981031717","timestamp":1556981031717,"source":"CALCULATED","sourceId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1556981031717","timestamp":1556981031717,"source":"CALCULATED","sourceVid":[],"requestId":"b0cbb498-19a7-4dfd-8740-1051f87157c0"}]},"domain":{"value":"hauck.io","timestamp":1556981031717,"source":"API","sourceId":null,"versions":[{"name":"domain","value":"hauck.io","timestamp":1556981031717,"source":"API","sourceVid":[],"requestId":"b0cbb498-19a7-4dfd-8740-1051f87157c0"}]},"name":{"value":"Leuschke-Watsica","timestamp":1556981031717,"source":"API","sourceId":null,"versions":[{"name":"name","value":"Leuschke-Watsica","timestamp":1556981031717,"source":"API","sourceVid":[],"requestId":"b0cbb498-19a7-4dfd-8740-1051f87157c0"}]},"createdate":{"value":"1556981031717","timestamp":1556981031717,"source":"API","sourceId":null,"versions":[{"name":"createdate","value":"1556981031717","timestamp":1556981031717,"source":"API","sourceVid":[],"requestId":"b0cbb498-19a7-4dfd-8740-1051f87157c0"},{"name":"createdate","value":"1556981031717","timestamp":1556981031717,"sourceId":"API","source":"API","sourceVid":[],"requestId":"b0cbb498-19a7-4dfd-8740-1051f87157c0"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
-    http_version: 
-  recorded_at: Sat, 04 May 2019 14:43:51 GMT
-- request:
     method: put
-    uri: https://api.hubapi.com/companies/v2/companies/1897466915?hapikey=<HAPI_KEY>
+    uri: https://api.hubapi.com/companies/v2/companies/9338040442
     body:
       encoding: UTF-8
       string: '{"properties":[{"name":"name","value":"Foobar"}]}'
     headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
       Content-Type:
       - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 04 May 2019 14:43:52 GMT
+      - Mon, 08 Aug 2022 14:49:12 GMT
       Content-Type:
       - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '443'
       Connection:
       - keep-alive
-      Set-Cookie:
-      - __cfduid=d363dd44ced64cf09e0d02d86aed6a30b1556981031; expires=Sun, 03-May-20
-        14:43:51 GMT; path=/; domain=.hubapi.com; HttpOnly
-      X-Trace:
-      - 2BFC695A3F3F92345620E58EF0858268DB1CE263F3000000000000000000
-      X-Hubspot-Ratelimit-Daily:
-      - '1000000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '979556'
-      X-Hubspot-Ratelimit-Secondly:
-      - '60'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '57'
-      Access-Control-Allow-Credentials:
-      - 'false'
+      Cf-Ray:
+      - 73790eaa4f03cdbf-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - a4aeb5a1-19e6-48cb-af4f-62e672125b01
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '248564'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '78'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '7'
+      X-Trace:
+      - 2BA58A96DEDC87895B847683C07BCCCDB9091C600A000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=1bht2R0QCRASqAs3Jdbd2QW4MiV%2FosCDMjlgfefdYmrcBuw66v%2BWgtCh3E%2F7E3FXg2cnd4HIZQ4C1rzjX8Z5BdTo0yCZ0Qm%2B9hX4OG0dv5mI2kwTnHZs8YKygDB83D2JGAvg1OjxI39hodj8"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Cf-Ray:
-      - 4d1b3fd9cdb49f3a-IAD
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"portalId":<PORTAL_ID>,"companyId":9338040442,"isDeleted":false,"properties":{"hs_lastmodifieddate":{"value":"1659970152304","timestamp":1659970152304,"source":"CALCULATED","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1659970152304","timestamp":1659970152304,"sourceId":"1024781","source":"CALCULATED","sourceVid":[],"requestId":"a4aeb5a1-19e6-48cb-af4f-62e672125b01"},{"name":"hs_lastmodifieddate","value":"1659970151819","timestamp":1659970151819,"sourceId":"1024781","source":"CALCULATED","sourceVid":[],"requestId":"78a6dcd2-d8e0-4001-a40a-f55c948026f3"}]},"name":{"value":"Foobar","timestamp":1659970152304,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"name","value":"Foobar","timestamp":1659970152304,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"a4aeb5a1-19e6-48cb-af4f-62e672125b01"},{"name":"name","value":"Dicki
+        LLC","timestamp":1659970151819,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"78a6dcd2-d8e0-4001-a40a-f55c948026f3"}]},"hs_object_id":{"value":"9338040442","timestamp":1659970151819,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"hs_object_id","value":"9338040442","timestamp":1659970151819,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"78a6dcd2-d8e0-4001-a40a-f55c948026f3"}]},"createdate":{"value":"1659970151819","timestamp":1659970151819,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"createdate","value":"1659970151819","timestamp":1659970151819,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"78a6dcd2-d8e0-4001-a40a-f55c948026f3"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
+  recorded_at: Mon, 08 Aug 2022 14:49:12 GMT
+- request:
+    method: post
+    uri: https://api.hubapi.com/companies/v2/companies/
     body:
       encoding: UTF-8
-      string: '{"portalId":62515,"companyId":1897466915,"isDeleted":false,"properties":{"hs_lastmodifieddate":{"value":"1556981031990","timestamp":1556981031990,"source":"CALCULATED","sourceId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1556981031990","timestamp":1556981031990,"source":"CALCULATED","sourceVid":[],"requestId":"56d9cc82-c8a0-4a01-a4a2-2dada90c5943"},{"name":"hs_lastmodifieddate","value":"1556981031717","timestamp":1556981031717,"source":"CALCULATED","sourceVid":[],"requestId":"b0cbb498-19a7-4dfd-8740-1051f87157c0"}]},"name":{"value":"Foobar","timestamp":1556981031990,"source":"API","sourceId":"56d9cc82-c8a0-4a01-a4a2-2dada90c5943","versions":[{"name":"name","value":"Foobar","timestamp":1556981031990,"sourceId":"56d9cc82-c8a0-4a01-a4a2-2dada90c5943","source":"API","sourceVid":[],"requestId":"56d9cc82-c8a0-4a01-a4a2-2dada90c5943"},{"name":"name","value":"Leuschke-Watsica","timestamp":1556981031717,"source":"API","sourceVid":[],"requestId":"b0cbb498-19a7-4dfd-8740-1051f87157c0"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
-    http_version: 
-  recorded_at: Sat, 04 May 2019 14:43:52 GMT
-recorded_with: VCR 4.0.0
+      string: '{"properties":[{"name":"name","value":"Braun, Krajcik and Schimmel"},{"name":"domain","value":"stamm.co"}]}'
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 08 Aug 2022 14:49:13 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '430'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 73790eb018bb08ab-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - e2281fa9-80f3-4cd2-8d72-b9eb42230e4c
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '248562'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '78'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '7'
+      X-Trace:
+      - 2B0D2DCB0A7467880258A094196E1EEDE840D7C5C4000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=VPAtPsS2vfLi%2BwUqCooWZk40MhRmixbQmE2yBPhZFpEqI38yVNY6YSNXQHgNhpJRn%2BUsRgLCWBhVl%2FkY7ciSgBznsMYt78VYFWwX5KU2Nt8l0fDkyT2o8fEuD9bNqVhaQclovWjeank2JQHt"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"portalId":<PORTAL_ID>,"companyId":9338040445,"isDeleted":false,"properties":{"website":{"value":"stamm.co","timestamp":1659970153091,"source":"CALCULATED","sourceId":null,"updatedByUserId":null,"versions":[{"name":"website","value":"stamm.co","timestamp":1659970153091,"source":"CALCULATED","sourceVid":[],"requestId":"e2281fa9-80f3-4cd2-8d72-b9eb42230e4c"}]},"hs_lastmodifieddate":{"value":"1659970153091","timestamp":1659970153091,"source":"CALCULATED","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1659970153091","timestamp":1659970153091,"sourceId":"1024781","source":"CALCULATED","sourceVid":[],"requestId":"e2281fa9-80f3-4cd2-8d72-b9eb42230e4c"}]},"domain":{"value":"stamm.co","timestamp":1659970153091,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"domain","value":"stamm.co","timestamp":1659970153091,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"e2281fa9-80f3-4cd2-8d72-b9eb42230e4c"}]},"name":{"value":"Braun,
+        Krajcik and Schimmel","timestamp":1659970153091,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"name","value":"Braun,
+        Krajcik and Schimmel","timestamp":1659970153091,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"e2281fa9-80f3-4cd2-8d72-b9eb42230e4c"}]},"hs_object_id":{"value":"9338040445","timestamp":1659970153091,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"hs_object_id","value":"9338040445","timestamp":1659970153091,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"e2281fa9-80f3-4cd2-8d72-b9eb42230e4c"}]},"createdate":{"value":"1659970153091","timestamp":1659970153091,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"createdate","value":"1659970153091","timestamp":1659970153091,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"e2281fa9-80f3-4cd2-8d72-b9eb42230e4c"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
+  recorded_at: Mon, 08 Aug 2022 14:49:13 GMT
+- request:
+    method: put
+    uri: https://api.hubapi.com/companies/v2/companies/9338040445
+    body:
+      encoding: UTF-8
+      string: '{"properties":[{"name":"name","value":"Foobar"}]}'
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 08 Aug 2022 14:49:14 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '455'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 73790eb1bfe1edcf-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 41ee36ff-2b5d-4fbb-9469-e6358e9cf5f2
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '248561'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '77'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '7'
+      X-Trace:
+      - 2BD4C7766D654460265255B6F53C8FE25AE7BF4319000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=ljGdXVZKVTH0ePa8wSdLaWFFi6nuu11BZnMRlWtb7jWeFY85Ei6nVf2wgPSqCpSWlMmqOU81DL9uTXtNiNntYHLtrWvMlz8COUnzVQ6tNHA9YcN%2Fzi%2FgtEfqhuWIq1Hj8hEBGfrIng2MYoZN"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"portalId":<PORTAL_ID>,"companyId":9338040445,"isDeleted":false,"properties":{"hs_lastmodifieddate":{"value":"1659970153381","timestamp":1659970153381,"source":"CALCULATED","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1659970153381","timestamp":1659970153381,"sourceId":"1024781","source":"CALCULATED","sourceVid":[],"requestId":"41ee36ff-2b5d-4fbb-9469-e6358e9cf5f2"},{"name":"hs_lastmodifieddate","value":"1659970153091","timestamp":1659970153091,"sourceId":"1024781","source":"CALCULATED","sourceVid":[],"requestId":"e2281fa9-80f3-4cd2-8d72-b9eb42230e4c"}]},"name":{"value":"Foobar","timestamp":1659970153381,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"name","value":"Foobar","timestamp":1659970153381,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"41ee36ff-2b5d-4fbb-9469-e6358e9cf5f2"},{"name":"name","value":"Braun,
+        Krajcik and Schimmel","timestamp":1659970153091,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"e2281fa9-80f3-4cd2-8d72-b9eb42230e4c"}]},"hs_object_id":{"value":"9338040445","timestamp":1659970153091,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"hs_object_id","value":"9338040445","timestamp":1659970153091,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"e2281fa9-80f3-4cd2-8d72-b9eb42230e4c"}]},"createdate":{"value":"1659970153091","timestamp":1659970153091,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"createdate","value":"1659970153091","timestamp":1659970153091,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"e2281fa9-80f3-4cd2-8d72-b9eb42230e4c"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
+  recorded_at: Mon, 08 Aug 2022 14:49:14 GMT
+recorded_with: VCR 6.0.0

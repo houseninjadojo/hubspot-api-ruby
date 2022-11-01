@@ -2,63 +2,77 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.hubapi.com/contacts/v1/forms?hapikey=demo
+    uri: https://api.hubapi.com/forms/v2/forms
     body:
       encoding: UTF-8
       string: "{}"
     headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
       Content-Type:
       - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 400
       message: Bad Request
     headers:
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Content-Type:
-      - application/json; charset=UTF-8
       Date:
-      - Mon, 23 Feb 2015 16:16:41 GMT
-      Vary:
-      - Accept-Encoding
-      - Accept-Encoding
+      - Mon, 08 Aug 2022 14:52:13 GMT
+      Content-Type:
+      - application/json;charset=utf-8
       Content-Length:
-      - '175'
+      - '179'
       Connection:
       - keep-alive
-    body:
-      encoding: UTF-8
-      string: '{"status":"error","message":"Form name is required, form guid ''e218aaae-2783-4b7f-b072-4e8f5163e44b''","type":"MISSING_NAME","requestId":"696220a7-8411-421f-8945-3c0cd370a8a5"}'
-    http_version: 
-  recorded_at: Mon, 23 Feb 2015 16:16:41 GMT
-- request:
-    method: post
-    uri: https://api.hubapi.com/forms/v2/forms?hapikey=demo
-    body:
-      encoding: UTF-8
-      string: "{}"
-    headers:
-      Content-Type:
-      - application/json
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
+      Cf-Ray:
+      - 73791318ada43b25-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
       Access-Control-Allow-Credentials:
       - 'false'
-      Content-Type:
-      - application/json; charset=UTF-8
-      Content-Length:
-      - '230'
-      Date:
-      - Thu, 16 Jun 2016 22:44:10 GMT
-      Connection:
-      - close
+      Access-Control-Expose-Headers:
+      - x-last-modified-timestamp, X-HubSpot-NotFound, X-HS-User-Request, Link, X-Total-Count,
+        HS-Total-Forms-Count, HS-Total-Folders-Count
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 4a5ead38-2b88-4f9e-b904-1e69a78848ce
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '248171'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '73'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '7'
+      X-Trace:
+      - 2BAF299BD895F86E096A470B16468468156AD4BC14000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=sTbmj5Sogvfh0RhU5cPqDJoPmhyGowKJ1nrfSeZgVLTTs1Ua672HjjqcDBIxFuGL0CiDf0SoX6cKRryVESGqN2Yt99ALY9CNc5IICHZE9pMjzOu4qeBarevrzBtw2YVOqsioM%2FoAt%2BbGMxaK"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: UTF-8
-      string: '{"status":"error","message":"Form name is required, form guid ''00a537bf-1389-4e3a-af2a-b27868fd04fa''","correlationId":"b1a2939a-e18b-4594-8357-c18e11c818d1","type":"MISSING_NAME","requestId":"494cdd03-fa33-44ad-8346-d31430031769"}'
-    http_version: 
-  recorded_at: Thu, 16 Jun 2016 22:44:10 GMT
-recorded_with: VCR 2.4.0
+      string: '{"status":"error","message":"Form name is required, form guid ''66483ac3-619b-416d-9e29-5b77a0e5a078''","correlationId":"4a5ead38-2b88-4f9e-b904-1e69a78848ce","type":"MISSING_NAME"}'
+  recorded_at: Mon, 08 Aug 2022 14:52:13 GMT
+recorded_with: VCR 6.0.0

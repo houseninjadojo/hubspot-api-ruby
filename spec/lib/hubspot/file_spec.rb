@@ -1,38 +1,24 @@
-describe Hubspot do
-
+describe Hubspot::File do
   let(:example_file_hash) do
-    VCR.use_cassette("file_list", record: :none) do
-      url = Hubspot::Connection.send(:generate_url, Hubspot::File::LIST_FILE_PATH)
-      resp = HTTParty.get(url, format: :json)
-      resp.parsed_response["objects"].first
+    VCR.use_cassette('file_example') do
+      headers = { Authorization: "Bearer #{ENV.fetch('HUBSPOT_ACCESS_TOKEN')}" }
+      body = {
+        file: File.open(File::NULL, 'r'),
+        options: { access: 'PRIVATE', ttl: 'P1M', overwrite: false }.to_json,
+        folderPath: '/'
+      }
+      url = 'https://api.hubapi.com/filemanager/api/v3/files/upload'
+      HTTParty.post(url, body: body, headers: headers).parsed_response
     end
   end
 
-  before do
-    Hubspot.configure(hapikey: "demo")
-  end
-
-  describe Hubspot::File do
-
-    describe ".find_by_id" do
-      it "should fetch specific file" do
-	VCR.use_cassette("file_find", record: :none) do
-	  file = Hubspot::File.find_by_id(example_file_hash["id"])
-	  file.id.should eq(example_file_hash["id"])
-	end
+  describe ".find_by_id" do
+    it "should fetch specific file" do
+      VCR.use_cassette("file_find") do
+        id = example_file_hash['objects'].first['id']
+        file = Hubspot::File.find_by_id(id)
+        file.id.should eq(id)
       end
     end
-
-    describe '#destroy!' do
-      it 'should remove from hubspot' do
-	VCR.use_cassette("file_delete", record: :none) do
-          file = Hubspot::File.find_by_id(example_file_hash["id"])
-	  res = file.destroy!
-	  expect(res["succeeded"]).to be true
-	end
-      end
-    end
-
   end
-
 end

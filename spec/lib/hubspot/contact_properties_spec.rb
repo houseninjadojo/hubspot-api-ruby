@@ -14,29 +14,8 @@ describe Hubspot::ContactProperties do
     end
   end
 
-  let(:example_groups) do
-    VCR.use_cassette('contact_properties/groups_example') do
-      HTTParty.get('https://api.hubapi.com/contacts/v2/groups?hapikey=demo').parsed_response
-    end
-  end
-
-  let(:example_properties) do
-    VCR.use_cassette('contact_properties/properties_example') do
-      HTTParty.get('https://api.hubapi.com/contacts/v2/properties?hapikey=demo').parsed_response
-    end
-  end
-
-  before { Hubspot.configure(hapikey: 'demo') }
-
   describe 'Properties' do
     describe '.all' do
-      context 'with no filter' do
-        cassette 'contact_properties/all_properties'
-
-        it 'should return all properties' do
-          expect(Hubspot::ContactProperties.all).to eql(example_properties)
-        end
-      end
 
       let(:groups) { %w(calltrackinginfo emailinformation) }
 
@@ -55,6 +34,26 @@ describe Hubspot::ContactProperties do
         it 'should return properties for the non-specified group[s]' do
           response = Hubspot::ContactProperties.all({}, { exclude: groups })
           response.each { |p| expect(groups.include?(p['groupName'])).to be false }
+        end
+      end
+    end
+
+    describe '.find' do
+      context 'existing property' do
+        cassette 'contact_properties/existing_property'
+
+        it 'should return a contact property by name if it exists' do
+          response = Hubspot::ContactProperties.find('full_name')
+          expect(response['name']).to eq 'full_name'
+          expect(response['label']).to eq 'Full name'
+        end
+      end
+
+      context 'non-existent property' do
+        cassette 'contact_properties/non_existent_property'
+
+        it 'should return an error for a missing property' do
+          expect{ Hubspot::ContactProperties.find('this_does_not_exist') }.to raise_error(Hubspot::NotFoundError)
         end
       end
     end
@@ -133,7 +132,7 @@ describe Hubspot::ContactProperties do
         cassette 'contact_properties/delete_non_property'
 
         it 'should raise an error' do
-          expect { Hubspot::ContactProperties.delete!(name) }.to raise_error(Hubspot::RequestError)
+          expect { Hubspot::ContactProperties.delete!(name) }.to raise_error(Hubspot::NotFoundError)
         end
       end
     end
@@ -141,14 +140,6 @@ describe Hubspot::ContactProperties do
 
   describe 'Groups' do
     describe '.groups' do
-      context 'with no filter' do
-        cassette 'contact_properties/all_groups'
-
-        it 'should return all groups' do
-          expect(Hubspot::ContactProperties.groups).to eql(example_groups)
-        end
-      end
-
       let(:groups) { %w(calltrackinginfo emailinformation) }
 
       context 'with included groups' do
@@ -166,6 +157,26 @@ describe Hubspot::ContactProperties do
         it 'should return groups that were not excluded' do
           response = Hubspot::ContactProperties.groups({}, { exclude: groups })
           response.each { |p| expect(groups.include?(p['name'])).to be false }
+        end
+      end
+    end
+
+    describe '.find_group' do
+      context 'existing group' do
+        cassette 'contact_properties/existing_group'
+
+        it 'should return a contact property by name if it exists' do
+          response = Hubspot::ContactProperties.find_group('contactinformation')
+          expect(response['name']).to eq 'contactinformation'
+          expect(response['displayName']).to eq 'Contact information'
+        end
+      end
+
+      context 'non-existent group' do
+        cassette 'contact_properties/non_existent_group'
+
+        it 'should return an error for a missing group' do
+          expect{ Hubspot::ContactProperties.find_group('this_does_not_exist') }.to raise_error(Hubspot::NotFoundError)
         end
       end
     end
@@ -193,10 +204,10 @@ describe Hubspot::ContactProperties do
 
         let(:sub_params) { params.select { |k, _| k != 'displayName' } }
 
-        it 'should return the valid parameters' do
-          params['name'] = 'ff_group234'
+        it 'should return the valid parameters' do |example|
+          params['name'] = "ff_group_#{SecureRandom.hex}"
           response       = Hubspot::ContactProperties.create_group!(sub_params)
-          expect(Hubspot::ContactProperties.same?(response, sub_params)).to be true
+          expect(Hubspot::ContactProperties.same?(response.except("name"), sub_params.except("name"))).to be true
         end
       end
     end
@@ -237,7 +248,7 @@ describe Hubspot::ContactProperties do
         cassette 'contact_properties/delete_non_group'
 
         it 'should raise an error' do
-          expect { Hubspot::ContactProperties.delete_group!(name) }.to raise_error(Hubspot::RequestError)
+          expect { Hubspot::ContactProperties.delete_group!(name) }.to raise_error(Hubspot::NotFoundError)
         end
       end
     end

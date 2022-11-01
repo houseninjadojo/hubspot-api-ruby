@@ -28,6 +28,7 @@ require 'hubspot/engagement'
 require 'hubspot/subscription'
 require 'hubspot/oauth'
 require 'hubspot/file'
+require 'hubspot/meeting'
 require 'hubspot/line_item'
 
 module Hubspot

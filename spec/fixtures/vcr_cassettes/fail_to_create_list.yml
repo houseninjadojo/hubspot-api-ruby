@@ -2,34 +2,75 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.hubapi.com/contacts/v1/lists?hapikey=demo
+    uri: https://api.hubapi.com/contacts/v1/lists
     body:
       encoding: UTF-8
       string: '{"name":null,"dynamic":false,"portal_id":null}'
     headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
       Content-Type:
       - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 400
       message: Bad Request
     headers:
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Content-Type:
-      - application/json; charset=UTF-8
       Date:
-      - Sun, 22 Feb 2015 02:29:50 GMT
-      Vary:
-      - Accept-Encoding
-      - Accept-Encoding
+      - Mon, 08 Aug 2022 14:50:13 GMT
+      Content-Type:
+      - application/json;charset=utf-8
       Content-Length:
-      - '110'
+      - '212'
       Connection:
       - keep-alive
+      Cf-Ray:
+      - 73791027ba6deda7-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - ec800086-1a59-4438-82b3-abf1874e2b06
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '248430'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '82'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '8'
+      X-Trace:
+      - 2B62C7F98F90708892A055C8DF903C155AD08116D3000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=BdaLX2mPowEAmYhK13BrweRPuDAb4Z5ZAzz7UDn0EoClOrQ%2BYSbQYeE1QYzS8LPk7l9x%2BMZvHhyopUyRuiQjybzUhJwhVfBCZgvoc5oMQzxEsJSTO%2BB6e8nLo7q6ZLMblGCYCJF05AQFDhpd"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: UTF-8
-      string: '{"status":"error","message":"Every list must have a name.","requestId":"dc5b8484-32b4-42a5-8422-9e1ff097ed31"}'
-    http_version: 
-  recorded_at: Sun, 22 Feb 2015 02:29:50 GMT
-recorded_with: VCR 2.4.0
+      string: '{"status":"error","message":"{\"status\":\"error\",\"message\":\"Every
+        list must have a name.\",\"correlationId\":\"ec800086-1a59-4438-82b3-abf1874e2b06\"}","correlationId":"ec800086-1a59-4438-82b3-abf1874e2b06"}'
+  recorded_at: Mon, 08 Aug 2022 14:50:13 GMT
+recorded_with: VCR 6.0.0

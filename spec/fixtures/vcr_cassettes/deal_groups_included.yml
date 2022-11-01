@@ -2,29 +2,78 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.hubapi.com/deals/v1/groups?hapikey=demo
+    uri: https://api.hubapi.com/deals/v1/groups
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Content-Type:
-      - application/json; charset=UTF-8
-      Content-Length:
-      - '204'
       Date:
-      - Tue, 05 Jan 2016 22:51:40 GMT
+      - Mon, 08 Aug 2022 14:51:16 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '251'
       Connection:
       - keep-alive
+      Cf-Ray:
+      - 737911b20be499b1-CDG
+      Cache-Control:
+      - no-cache, no-store, no-transform, must-revalidate, max-age=0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 0ede20b4-12b3-4633-ab36-b4e7959a6fc2
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '248302'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '83'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '8'
+      X-Trace:
+      - 2B02CFB4B35725D4F3D50F1278F18A7466209A9B34000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=iIIia%2F%2FrGmUXOjJFJIkt5E6Exk3bP6SzcW8wA%2B2Gy63h5Yx1fvMd%2B1HRiB%2BV4PqHb5TlLLSoP8Spehimzeh8aidb3aXVmzOi5O5OGCmpqXeZrbKL9Ht8gK6dne8AqJASt1UK%2B5wacz6TSuM1"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '[{"name":"dealinformation","displayName":"Deal Information","displayOrder":0},{"name":"workflowmax","displayName":"WorkflowMAX","displayOrder":1},{"name":"ff_group23","displayName":"","displayOrder":100}]'
-    http_version: 
-  recorded_at: Tue, 05 Jan 2016 22:51:40 GMT
-recorded_with: VCR 2.4.0
+      encoding: ASCII-8BIT
+      string: '[{"name":"deal_activity","fulcrumPortalId":8008758,"fulcrumTimestamp":1593475199999,"displayName":"Deal
+        activity","displayOrder":-1,"hubspotDefined":true},{"name":"deal_revenue","fulcrumPortalId":8008758,"fulcrumTimestamp":1593475199999,"displayName":"Deal
+        revenue","displayOrder":-1,"hubspotDefined":true},{"name":"dealinformation","fulcrumPortalId":0,"fulcrumTimestamp":0,"displayName":"Deal
+        information","displayOrder":0,"hubspotDefined":true},{"name":"analyticsinformation","fulcrumPortalId":0,"fulcrumTimestamp":0,"displayName":"Analytics
+        history","displayOrder":1,"hubspotDefined":true},{"name":"ff_group_66f70f4187f5baf4456f870678a047c4","displayName":"","displayOrder":100,"hubspotDefined":false}]'
+  recorded_at: Mon, 08 Aug 2022 14:51:16 GMT
+recorded_with: VCR 6.0.0

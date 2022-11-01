@@ -2,110 +2,284 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.hubapi.com/owners/v2/owners?email=aaron@unbounce.com&hapikey=demo&includeInactive=false
+    uri: https://api.hubapi.com/owners/v2/owners?email=augustin@captaincontrat.com&includeInactive=false
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
+      Date:
+      - Mon, 08 Aug 2022 14:52:28 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '292'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 737913735d073a17-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
       Access-Control-Allow-Credentials:
       - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - c047d22b-8391-43fe-a48f-1f239d90ae9d
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '248135'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '77'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '7'
+      X-Trace:
+      - 2BD79A0F83E1115B568BBF71B747AC7D39C9303B7C000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=R3oyCK96U8NKTjHNQ8YROcFUchwS6m5KrfyrQ2NQOwjTWKt0LS6vjQ9Z%2FuiCaPnogc55AOxX60xI7WXO%2Bhma0u1%2BoOZe6ysT4WCEvbxPJ1NOjZx7%2FE2u5kp0xyXJ6XafZdTDnOpDY96Z1hop"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"portalId":<PORTAL_ID>,"ownerId":156644386,"type":"PERSON","firstName":"Augustin","lastName":"de
+        Maintenant","email":"augustin@captaincontrat.com","createdAt":1646901307500,"updatedAt":1652082080452,"remoteList":[{"id":115353727,"portalId":<PORTAL_ID>,"ownerId":156644386,"remoteId":"11598694","remoteType":"HUBSPOT","active":true}],"hasContactsAccess":false,"activeSalesforceId":null,"userIdIncludingInactive":11598694,"activeUserId":11598694,"isActive":true}]'
+  recorded_at: Mon, 08 Aug 2022 14:52:28 GMT
+- request:
+    method: get
+    uri: https://api.hubapi.com/owners/v2/owners?email=boris@captaincontrat.com&includeInactive=false
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 08 Aug 2022 14:52:28 GMT
       Content-Type:
-      - application/json; charset=UTF-8
+      - application/json;charset=utf-8
+      Content-Length:
+      - '290'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 737913759a690834-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 1acb2001-57e6-46db-89f1-3644a31fc1f6
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '248134'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '76'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '7'
+      X-Trace:
+      - 2B52C052578C59FD611F7D61CE073FF6A9EC524121000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=vWbX2JRxgvCYqzMAml6ZuI6zXhxGQvXdHWG4Xm1wRHktxhi8PzuvfFppbxJue69TrHtZOZUk2UtePKH7b1jIyl8u6L5KgsFlDEOj84JdRJTajKOR5Av8pff8LodKTBErNoNc4SUfW9pgN6%2Fe"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3sicG9ydGFsSWQiOjxQT1JUQUxfSUQ+LCJvd25lcklkIjoxNTgxMzc0OTAsInR5cGUiOiJQRVJTT04iLCJmaXJzdE5hbWUiOiJCb3JpcyIsImxhc3ROYW1lIjoiQWxmw7ZsZGkiLCJlbWFpbCI6ImJvcmlzQGNhcHRhaW5jb250cmF0LmNvbSIsImNyZWF0ZWRBdCI6MTY0NzI3NzMwNDAzMCwidXBkYXRlZEF0IjoxNjU5MDk1NzU2Mzc0LCJyZW1vdGVMaXN0IjpbeyJpZCI6MTE1OTk3MzY1LCJwb3J0YWxJZCI6PFBPUlRBTF9JRD4sIm93bmVySWQiOjE1ODEzNzQ5MCwicmVtb3RlSWQiOiIyNzg2MTkwMSIsInJlbW90ZVR5cGUiOiJIVUJTUE9UIiwiYWN0aXZlIjp0cnVlfV0sImhhc0NvbnRhY3RzQWNjZXNzIjpmYWxzZSwiYWN0aXZlU2FsZXNmb3JjZUlkIjpudWxsLCJ1c2VySWRJbmNsdWRpbmdJbmFjdGl2ZSI6Mjc4NjE5MDEsImFjdGl2ZVVzZXJJZCI6Mjc4NjE5MDEsImlzQWN0aXZlIjp0cnVlfV0=
+  recorded_at: Mon, 08 Aug 2022 14:52:28 GMT
+- request:
+    method: get
+    uri: https://api.hubapi.com/owners/v2/owners?email=manon@captaincontrat.com&includeInactive=false
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 08 Aug 2022 14:52:29 GMT
+      Content-Type:
+      - application/json;charset=utf-8
       Content-Length:
       - '283'
-      Date:
-      - Wed, 20 Jan 2016 20:14:06 GMT
       Connection:
       - keep-alive
+      Cf-Ray:
+      - 737913791f493ad1-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 3ca63b6e-9ef1-4aba-9725-a4bddaba0de7
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '248133'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '78'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '7'
+      X-Trace:
+      - 2B54B13B6C027B67F49ED5DA2D7C6B77E6460B6FCB000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Hv6kPB8Lki9z2L1rChZekc4HXsqIrdnMLCao0sZYVWgHowRBcgg1x1BxobBrU1DI6qCKPKgCz4xXJaHfRPL49CObTW7GAoXXyqhWgPxb4FiJKqyLWqinu02f7XVoWVukpDk2d5GDmub9seY9"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '[{"portalId":62515,"ownerId":72,"type":"PERSON","firstName":"Aaron","lastName":"Oman","email":"aaron@unbounce.com","createdAt":1405605859739,"updatedAt":1446764930941,"remoteList":[{"id":29619,"portalId":62515,"ownerId":72,"remoteId":"254556","remoteType":"HUBSPOT","active":true}]}]'
-    http_version: 
-  recorded_at: Wed, 20 Jan 2016 20:14:06 GMT
+      encoding: ASCII-8BIT
+      string: '[{"portalId":<PORTAL_ID>,"ownerId":156644387,"type":"PERSON","firstName":"Manon","lastName":"Prevot","email":"manon@captaincontrat.com","createdAt":1646901307550,"updatedAt":1651493551619,"remoteList":[{"id":115353728,"portalId":<PORTAL_ID>,"ownerId":156644387,"remoteId":"3905955","remoteType":"HUBSPOT","active":true}],"hasContactsAccess":false,"activeSalesforceId":null,"userIdIncludingInactive":3905955,"activeUserId":3905955,"isActive":true}]'
+  recorded_at: Mon, 08 Aug 2022 14:52:29 GMT
 - request:
     method: get
-    uri: https://api.hubapi.com/owners/v2/owners?email=support@unbounce.com&hapikey=demo&includeInactive=false
+    uri: https://api.hubapi.com/owners/v2/owners?email=yannick@captaincontrat.com&includeInactive=false
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Content-Type:
-      - application/json; charset=UTF-8
-      Content-Length:
-      - '285'
       Date:
-      - Wed, 20 Jan 2016 20:16:03 GMT
-      Connection:
-      - keep-alive
-    body:
-      encoding: UTF-8
-      string: '[{"portalId":62515,"ownerId":81,"type":"PERSON","firstName":"Aaron","lastName":"Oman","email":"support@unbounce.com","createdAt":1405605861125,"updatedAt":1446764931682,"remoteList":[{"id":29899,"portalId":62515,"ownerId":81,"remoteId":"329822","remoteType":"HUBSPOT","active":true}]}]'
-    http_version: 
-  recorded_at: Wed, 20 Jan 2016 20:16:03 GMT
-- request:
-    method: get
-    uri: https://api.hubapi.com/owners/v2/owners?email=adwordsapp@websitepublicity.com&hapikey=demo&includeInactive=false
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers: {}
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Access-Control-Allow-Credentials:
-      - 'false'
+      - Mon, 08 Aug 2022 14:52:29 GMT
       Content-Type:
-      - application/json; charset=UTF-8
-      Content-Length:
-      - '297'
-      Date:
-      - Wed, 20 Jan 2016 20:16:03 GMT
-      Connection:
-      - keep-alive
-    body:
-      encoding: UTF-8
-      string: '[{"portalId":62515,"ownerId":75,"type":"PERSON","firstName":"AdWords","lastName":"App","email":"adwordsapp@websitepublicity.com","createdAt":1405605860232,"updatedAt":1446764931762,"remoteList":[{"id":29739,"portalId":62515,"ownerId":75,"remoteId":"310514","remoteType":"HUBSPOT","active":true}]}]'
-    http_version: 
-  recorded_at: Wed, 20 Jan 2016 20:16:03 GMT
-- request:
-    method: get
-    uri: https://api.hubapi.com/owners/v2/owners?email=adrianmott@gmail.com&hapikey=demo&includeInactive=false
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers: {}
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Content-Type:
-      - application/json; charset=UTF-8
+      - application/json;charset=utf-8
       Content-Length:
       - '286'
-      Date:
-      - Wed, 20 Jan 2016 20:16:03 GMT
       Connection:
       - keep-alive
+      Cf-Ray:
+      - 7379137af8483fef-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - f84ad5b5-f867-406d-8d30-948652b9313e
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '248132'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '77'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '7'
+      X-Trace:
+      - 2BDD319FF763CCB117797B82C3E07128A10EA52A7E000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=gM6WFtFO1M7Sk4GLWi%2BaX%2BC9h6sYL8SDj1pIFLHAc3gesXSo%2Bxu%2ByCfDjsiUqQtlC6QsPpeCvUQ%2F9F36zjUKQFdNBzWAcJX9KPNV%2BK6HjONE5dvEQbwSdyfEZXVozTRIyYAjQKbKXTomzdnh"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '[{"portalId":62515,"ownerId":63,"type":"PERSON","firstName":"Adrian","lastName":"Mott","email":"adrianmott@gmail.com","createdAt":1405605858540,"updatedAt":1446764930939,"remoteList":[{"id":29381,"portalId":62515,"ownerId":63,"remoteId":"127430","remoteType":"HUBSPOT","active":true}]}]'
-    http_version: 
-  recorded_at: Wed, 20 Jan 2016 20:16:03 GMT
-recorded_with: VCR 2.4.0
+      encoding: ASCII-8BIT
+      string: '[{"portalId":<PORTAL_ID>,"ownerId":88354160,"type":"PERSON","firstName":"Yannick","lastName":"Fonjallaz","email":"yannick@captaincontrat.com","createdAt":1625489284669,"updatedAt":1632405523288,"remoteList":[{"id":55965105,"portalId":<PORTAL_ID>,"ownerId":88354160,"remoteId":"3326038","remoteType":"HUBSPOT","active":true}],"hasContactsAccess":false,"activeSalesforceId":null,"userIdIncludingInactive":3326038,"activeUserId":3326038,"isActive":true}]'
+  recorded_at: Mon, 08 Aug 2022 14:52:29 GMT
+recorded_with: VCR 6.0.0

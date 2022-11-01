@@ -2,102 +2,148 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.hubapi.com/companies/v2/companies/?hapikey=<HAPI_KEY>
+    uri: https://api.hubapi.com/companies/v2/companies/
     body:
       encoding: UTF-8
-      string: '{"properties":[{"name":"name","value":"Terry-Rau"},{"name":"domain","value":"waters.net"}]}'
+      string: '{"properties":[{"name":"name","value":"Koelpin, Auer and Wunsch"},{"name":"domain","value":"cremin-crist.org"}]}'
     headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
       Content-Type:
       - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 04 May 2019 14:43:58 GMT
+      - Mon, 08 Aug 2022 14:49:20 GMT
       Content-Type:
       - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '433'
       Connection:
       - keep-alive
-      Set-Cookie:
-      - __cfduid=dc2432f2e6e935b7384986b490085d2d91556981037; expires=Sun, 03-May-20
-        14:43:57 GMT; path=/; domain=.hubapi.com; HttpOnly
-      X-Trace:
-      - 2BA400A17B3B5927F166144E71CD793EEABCB3A234000000000000000000
-      X-Hubspot-Ratelimit-Daily:
-      - '1000000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '979537'
-      X-Hubspot-Ratelimit-Secondly:
-      - '60'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '55'
-      Access-Control-Allow-Credentials:
-      - 'false'
+      Cf-Ray:
+      - 73790ee05edb088b-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - e0a42fcf-61fa-4f1a-a44b-6b0cce31338e
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '248544'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '76'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '7'
+      X-Trace:
+      - 2BC33A1E8633F42E8B32D7E6D8D4D4A562D7901BE0000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=goo4j5RGYxee06Q%2BgsepuKNqtbViTrasEw5OOrLJzLhLx%2BF6jnI1mNaMcmpP3tOQ221%2Be8LvBRkpPxWTxvQlZtY7ZrUwNXfxwGrrlKXxWI2QDMVDPQ%2F5S%2BIvJ1RoHg%2BymPKnVuDG45ZmT81o"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Cf-Ray:
-      - 4d1b3ffefe999f82-IAD
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '{"portalId":62515,"companyId":1897430240,"isDeleted":false,"properties":{"website":{"value":"waters.net","timestamp":1556981037942,"source":"CALCULATED","sourceId":null,"versions":[{"name":"website","value":"waters.net","timestamp":1556981037942,"source":"CALCULATED","sourceVid":[],"requestId":"f8ef44a4-930f-4d7b-9744-9c425ea411c8"}]},"hs_lastmodifieddate":{"value":"1556981037942","timestamp":1556981037942,"source":"CALCULATED","sourceId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1556981037942","timestamp":1556981037942,"source":"CALCULATED","sourceVid":[],"requestId":"f8ef44a4-930f-4d7b-9744-9c425ea411c8"}]},"domain":{"value":"waters.net","timestamp":1556981037942,"source":"API","sourceId":null,"versions":[{"name":"domain","value":"waters.net","timestamp":1556981037942,"source":"API","sourceVid":[],"requestId":"f8ef44a4-930f-4d7b-9744-9c425ea411c8"}]},"name":{"value":"Terry-Rau","timestamp":1556981037942,"source":"API","sourceId":null,"versions":[{"name":"name","value":"Terry-Rau","timestamp":1556981037942,"source":"API","sourceVid":[],"requestId":"f8ef44a4-930f-4d7b-9744-9c425ea411c8"}]},"createdate":{"value":"1556981037942","timestamp":1556981037942,"source":"API","sourceId":null,"versions":[{"name":"createdate","value":"1556981037942","timestamp":1556981037942,"source":"API","sourceVid":[],"requestId":"f8ef44a4-930f-4d7b-9744-9c425ea411c8"},{"name":"createdate","value":"1556981037942","timestamp":1556981037942,"sourceId":"API","source":"API","sourceVid":[],"requestId":"f8ef44a4-930f-4d7b-9744-9c425ea411c8"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
-    http_version: 
-  recorded_at: Sat, 04 May 2019 14:43:58 GMT
+      encoding: ASCII-8BIT
+      string: '{"portalId":<PORTAL_ID>,"companyId":9337739700,"isDeleted":false,"properties":{"website":{"value":"cremin-crist.org","timestamp":1659970160782,"source":"CALCULATED","sourceId":null,"updatedByUserId":null,"versions":[{"name":"website","value":"cremin-crist.org","timestamp":1659970160782,"source":"CALCULATED","sourceVid":[],"requestId":"e0a42fcf-61fa-4f1a-a44b-6b0cce31338e"}]},"hs_lastmodifieddate":{"value":"1659970160782","timestamp":1659970160782,"source":"CALCULATED","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1659970160782","timestamp":1659970160782,"sourceId":"1024781","source":"CALCULATED","sourceVid":[],"requestId":"e0a42fcf-61fa-4f1a-a44b-6b0cce31338e"}]},"domain":{"value":"cremin-crist.org","timestamp":1659970160782,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"domain","value":"cremin-crist.org","timestamp":1659970160782,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"e0a42fcf-61fa-4f1a-a44b-6b0cce31338e"}]},"name":{"value":"Koelpin,
+        Auer and Wunsch","timestamp":1659970160782,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"name","value":"Koelpin,
+        Auer and Wunsch","timestamp":1659970160782,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"e0a42fcf-61fa-4f1a-a44b-6b0cce31338e"}]},"hs_object_id":{"value":"9337739700","timestamp":1659970160782,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"hs_object_id","value":"9337739700","timestamp":1659970160782,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"e0a42fcf-61fa-4f1a-a44b-6b0cce31338e"}]},"createdate":{"value":"1659970160782","timestamp":1659970160782,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"createdate","value":"1659970160782","timestamp":1659970160782,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"e0a42fcf-61fa-4f1a-a44b-6b0cce31338e"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
+  recorded_at: Mon, 08 Aug 2022 14:49:21 GMT
 - request:
     method: get
-    uri: https://api.hubapi.com/companies/v2/companies/1897430240?hapikey=<HAPI_KEY>
+    uri: https://api.hubapi.com/companies/v2/companies/9337739700
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 04 May 2019 14:43:58 GMT
+      - Mon, 08 Aug 2022 14:49:21 GMT
       Content-Type:
       - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '433'
       Connection:
       - keep-alive
-      Set-Cookie:
-      - __cfduid=dac2e41f10a72ebc606e3327d000b431c1556981038; expires=Sun, 03-May-20
-        14:43:58 GMT; path=/; domain=.hubapi.com; HttpOnly
-      X-Trace:
-      - 2B3610B7607B08CCFD79A3FDDDFA5B26C7A3E428DF000000000000000000
-      X-Hubspot-Ratelimit-Daily:
-      - '1000000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '979536'
-      X-Hubspot-Ratelimit-Secondly:
-      - '60'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '59'
-      Vary:
-      - Accept-Encoding, User-Agent
-      Access-Control-Allow-Credentials:
-      - 'false'
+      Cf-Ray:
+      - 73790ee3ffde3bbc-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - a37b03ef-4cb8-4e78-b182-494ec958fb2b
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '248543'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '78'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '7'
+      X-Trace:
+      - 2B3630F10A96F6962AC2BA0EA991F0A44E0D0FFC8E000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=AB0Qf8334Od%2FnDNa%2Fh3uGYmXctiXKDyYkE1GdPe%2BHTwMZuV9gHbXmPX2y%2FIk1SeDAM4H%2B9Qb0SGordRB7ZUD95U99Nlotbx%2F99aSLsajLLJ2OhcAdw3%2FD9gPknvdm3htUI8WCbpNHRZaalGt"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Cf-Ray:
-      - 4d1b40004ed0243c-IAD
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '{"portalId":62515,"companyId":1897430240,"isDeleted":false,"properties":{"website":{"value":"waters.net","timestamp":1556981037942,"source":"CALCULATED","sourceId":null,"versions":[{"name":"website","value":"waters.net","timestamp":1556981037942,"source":"CALCULATED","sourceVid":[],"requestId":"f8ef44a4-930f-4d7b-9744-9c425ea411c8"}]},"hs_lastmodifieddate":{"value":"1556981037942","timestamp":1556981037942,"source":"CALCULATED","sourceId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1556981037942","timestamp":1556981037942,"source":"CALCULATED","sourceVid":[],"requestId":"f8ef44a4-930f-4d7b-9744-9c425ea411c8"}]},"domain":{"value":"waters.net","timestamp":1556981037942,"source":"API","sourceId":null,"versions":[{"name":"domain","value":"waters.net","timestamp":1556981037942,"source":"API","sourceVid":[],"requestId":"f8ef44a4-930f-4d7b-9744-9c425ea411c8"}]},"name":{"value":"Terry-Rau","timestamp":1556981037942,"source":"API","sourceId":null,"versions":[{"name":"name","value":"Terry-Rau","timestamp":1556981037942,"source":"API","sourceVid":[],"requestId":"f8ef44a4-930f-4d7b-9744-9c425ea411c8"}]},"createdate":{"value":"1556981037942","timestamp":1556981037942,"source":"API","sourceId":null,"versions":[{"name":"createdate","value":"1556981037942","timestamp":1556981037942,"source":"API","sourceVid":[],"requestId":"f8ef44a4-930f-4d7b-9744-9c425ea411c8"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
-    http_version: 
-  recorded_at: Sat, 04 May 2019 14:43:58 GMT
-recorded_with: VCR 4.0.0
+      encoding: ASCII-8BIT
+      string: '{"portalId":<PORTAL_ID>,"companyId":9337739700,"isDeleted":false,"properties":{"website":{"value":"cremin-crist.org","timestamp":1659970160782,"source":"CALCULATED","sourceId":null,"updatedByUserId":null,"versions":[{"name":"website","value":"cremin-crist.org","timestamp":1659970160782,"source":"CALCULATED","sourceVid":[],"requestId":"e0a42fcf-61fa-4f1a-a44b-6b0cce31338e"}]},"hs_lastmodifieddate":{"value":"1659970160782","timestamp":1659970160782,"source":"CALCULATED","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1659970160782","timestamp":1659970160782,"sourceId":"1024781","source":"CALCULATED","sourceVid":[],"requestId":"e0a42fcf-61fa-4f1a-a44b-6b0cce31338e"}]},"domain":{"value":"cremin-crist.org","timestamp":1659970160782,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"domain","value":"cremin-crist.org","timestamp":1659970160782,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"e0a42fcf-61fa-4f1a-a44b-6b0cce31338e"}]},"name":{"value":"Koelpin,
+        Auer and Wunsch","timestamp":1659970160782,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"name","value":"Koelpin,
+        Auer and Wunsch","timestamp":1659970160782,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"e0a42fcf-61fa-4f1a-a44b-6b0cce31338e"}]},"hs_object_id":{"value":"9337739700","timestamp":1659970160782,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"hs_object_id","value":"9337739700","timestamp":1659970160782,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"e0a42fcf-61fa-4f1a-a44b-6b0cce31338e"}]},"createdate":{"value":"1659970160782","timestamp":1659970160782,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"createdate","value":"1659970160782","timestamp":1659970160782,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"e0a42fcf-61fa-4f1a-a44b-6b0cce31338e"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
+  recorded_at: Mon, 08 Aug 2022 14:49:21 GMT
+recorded_with: VCR 6.0.0

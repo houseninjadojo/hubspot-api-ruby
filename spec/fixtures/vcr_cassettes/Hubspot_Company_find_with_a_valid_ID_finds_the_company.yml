@@ -2,102 +2,148 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.hubapi.com/companies/v2/companies/?hapikey=<HAPI_KEY>
+    uri: https://api.hubapi.com/companies/v2/companies/
     body:
       encoding: UTF-8
-      string: '{"properties":[{"name":"name","value":"Feeney-Torp"},{"name":"domain","value":"stiedemannbechtelar.org"}]}'
+      string: '{"properties":[{"name":"name","value":"Bergstrom and Sons"},{"name":"domain","value":"parisian.com"}]}'
     headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
       Content-Type:
       - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 04 May 2019 14:43:54 GMT
+      - Mon, 08 Aug 2022 14:49:18 GMT
       Content-Type:
       - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '424'
       Connection:
       - keep-alive
-      Set-Cookie:
-      - __cfduid=d4e30a7fe77e67ca16e4fa8ca3d623de01556981034; expires=Sun, 03-May-20
-        14:43:54 GMT; path=/; domain=.hubapi.com; HttpOnly
-      X-Trace:
-      - 2B7F8C3AB721F8C7C1793EEE6775D1DDF69F0CB383000000000000000000
-      X-Hubspot-Ratelimit-Daily:
-      - '1000000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '979545'
-      X-Hubspot-Ratelimit-Secondly:
-      - '60'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '56'
-      Access-Control-Allow-Credentials:
-      - 'false'
+      Cf-Ray:
+      - 73790ed28fe399bd-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 8b8d7d75-548e-43fa-8401-1024d5ca1e00
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '248551'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '77'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '7'
+      X-Trace:
+      - 2BB05048220AA3045C2CBD76F0877C2B461F3127BB000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=npq9i54lOhDYdy0AQKKJ3i4mmwzvqkj1Uc00wdnXKtz4aWrvRHmCaPgTfdoHDK6ODM5207f53JG5aytrRNOnUJrFBhG0NTlF7ygD%2FzOYGpyB65fhSFiDaHMkhZGkD9Ubh6ZoVuaYuKSuY50q"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Cf-Ray:
-      - 4d1b3febe8439fbe-IAD
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '{"portalId":62515,"companyId":1897400096,"isDeleted":false,"properties":{"website":{"value":"stiedemannbechtelar.org","timestamp":1556981034894,"source":"CALCULATED","sourceId":null,"versions":[{"name":"website","value":"stiedemannbechtelar.org","timestamp":1556981034894,"source":"CALCULATED","sourceVid":[],"requestId":"10696545-5fad-4012-ab4f-5d86790f5c5f"}]},"hs_lastmodifieddate":{"value":"1556981034894","timestamp":1556981034894,"source":"CALCULATED","sourceId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1556981034894","timestamp":1556981034894,"source":"CALCULATED","sourceVid":[],"requestId":"10696545-5fad-4012-ab4f-5d86790f5c5f"}]},"domain":{"value":"stiedemannbechtelar.org","timestamp":1556981034894,"source":"API","sourceId":null,"versions":[{"name":"domain","value":"stiedemannbechtelar.org","timestamp":1556981034894,"source":"API","sourceVid":[],"requestId":"10696545-5fad-4012-ab4f-5d86790f5c5f"}]},"name":{"value":"Feeney-Torp","timestamp":1556981034894,"source":"API","sourceId":null,"versions":[{"name":"name","value":"Feeney-Torp","timestamp":1556981034894,"source":"API","sourceVid":[],"requestId":"10696545-5fad-4012-ab4f-5d86790f5c5f"}]},"createdate":{"value":"1556981034894","timestamp":1556981034894,"source":"API","sourceId":null,"versions":[{"name":"createdate","value":"1556981034894","timestamp":1556981034894,"source":"API","sourceVid":[],"requestId":"10696545-5fad-4012-ab4f-5d86790f5c5f"},{"name":"createdate","value":"1556981034894","timestamp":1556981034894,"sourceId":"API","source":"API","sourceVid":[],"requestId":"10696545-5fad-4012-ab4f-5d86790f5c5f"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
-    http_version: 
-  recorded_at: Sat, 04 May 2019 14:43:54 GMT
+      encoding: ASCII-8BIT
+      string: '{"portalId":<PORTAL_ID>,"companyId":9337706499,"isDeleted":false,"properties":{"website":{"value":"parisian.com","timestamp":1659970158579,"source":"CALCULATED","sourceId":null,"updatedByUserId":null,"versions":[{"name":"website","value":"parisian.com","timestamp":1659970158579,"source":"CALCULATED","sourceVid":[],"requestId":"8b8d7d75-548e-43fa-8401-1024d5ca1e00"}]},"hs_lastmodifieddate":{"value":"1659970158579","timestamp":1659970158579,"source":"CALCULATED","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1659970158579","timestamp":1659970158579,"sourceId":"1024781","source":"CALCULATED","sourceVid":[],"requestId":"8b8d7d75-548e-43fa-8401-1024d5ca1e00"}]},"domain":{"value":"parisian.com","timestamp":1659970158579,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"domain","value":"parisian.com","timestamp":1659970158579,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"8b8d7d75-548e-43fa-8401-1024d5ca1e00"}]},"name":{"value":"Bergstrom
+        and Sons","timestamp":1659970158579,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"name","value":"Bergstrom
+        and Sons","timestamp":1659970158579,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"8b8d7d75-548e-43fa-8401-1024d5ca1e00"}]},"hs_object_id":{"value":"9337706499","timestamp":1659970158579,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"hs_object_id","value":"9337706499","timestamp":1659970158579,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"8b8d7d75-548e-43fa-8401-1024d5ca1e00"}]},"createdate":{"value":"1659970158579","timestamp":1659970158579,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"createdate","value":"1659970158579","timestamp":1659970158579,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"8b8d7d75-548e-43fa-8401-1024d5ca1e00"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
+  recorded_at: Mon, 08 Aug 2022 14:49:18 GMT
 - request:
     method: get
-    uri: https://api.hubapi.com/companies/v2/companies/1897400096?hapikey=<HAPI_KEY>
+    uri: https://api.hubapi.com/companies/v2/companies/9337706499
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 04 May 2019 14:43:56 GMT
+      - Mon, 08 Aug 2022 14:49:18 GMT
       Content-Type:
       - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '424'
       Connection:
       - keep-alive
-      Set-Cookie:
-      - __cfduid=d79dd73928816057cac50944e7da775f31556981036; expires=Sun, 03-May-20
-        14:43:56 GMT; path=/; domain=.hubapi.com; HttpOnly
-      X-Trace:
-      - 2B3953120764EA3E501120C12BCF0DA3F5AAE6F6B0000000000000000000
-      X-Hubspot-Ratelimit-Daily:
-      - '1000000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '979544'
-      X-Hubspot-Ratelimit-Secondly:
-      - '60'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '59'
-      Vary:
-      - Accept-Encoding, User-Agent
-      Access-Control-Allow-Credentials:
-      - 'false'
+      Cf-Ray:
+      - 73790ed48e543a8d-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 10fcf3d1-4a07-47ec-a25b-64a3b520d47f
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '248550'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '76'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '7'
+      X-Trace:
+      - 2BF68E0154FAFEDA58894F97CFEC272FE4A2840225000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=uun9oLUUjgqV1zxDjMYj1lSuZ3PjuHEO4rXWZY57c5t%2BNK4iW9sLkYMw9QZ%2B4917Ael4tu4scD9xpe7RQHh8shld6g9KTP3GwXT6kzy35aqIx88pmP3D36tg3QyaSSVdHwH8MXW16KrmfGAA"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Cf-Ray:
-      - 4d1b3ff45d45cf00-IAD
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '{"portalId":62515,"companyId":1897400096,"isDeleted":false,"properties":{"website":{"value":"stiedemannbechtelar.org","timestamp":1556981034894,"source":"CALCULATED","sourceId":null,"versions":[{"name":"website","value":"stiedemannbechtelar.org","timestamp":1556981034894,"source":"CALCULATED","sourceVid":[],"requestId":"10696545-5fad-4012-ab4f-5d86790f5c5f"}]},"hs_lastmodifieddate":{"value":"1556981034894","timestamp":1556981034894,"source":"CALCULATED","sourceId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1556981034894","timestamp":1556981034894,"source":"CALCULATED","sourceVid":[],"requestId":"10696545-5fad-4012-ab4f-5d86790f5c5f"}]},"domain":{"value":"stiedemannbechtelar.org","timestamp":1556981034894,"source":"API","sourceId":null,"versions":[{"name":"domain","value":"stiedemannbechtelar.org","timestamp":1556981034894,"source":"API","sourceVid":[],"requestId":"10696545-5fad-4012-ab4f-5d86790f5c5f"}]},"name":{"value":"Feeney-Torp","timestamp":1556981034894,"source":"API","sourceId":null,"versions":[{"name":"name","value":"Feeney-Torp","timestamp":1556981034894,"source":"API","sourceVid":[],"requestId":"10696545-5fad-4012-ab4f-5d86790f5c5f"}]},"createdate":{"value":"1556981034894","timestamp":1556981034894,"source":"API","sourceId":null,"versions":[{"name":"createdate","value":"1556981034894","timestamp":1556981034894,"source":"API","sourceVid":[],"requestId":"10696545-5fad-4012-ab4f-5d86790f5c5f"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
-    http_version: 
-  recorded_at: Sat, 04 May 2019 14:43:56 GMT
-recorded_with: VCR 4.0.0
+      encoding: ASCII-8BIT
+      string: '{"portalId":<PORTAL_ID>,"companyId":9337706499,"isDeleted":false,"properties":{"website":{"value":"parisian.com","timestamp":1659970158579,"source":"CALCULATED","sourceId":null,"updatedByUserId":null,"versions":[{"name":"website","value":"parisian.com","timestamp":1659970158579,"source":"CALCULATED","sourceVid":[],"requestId":"8b8d7d75-548e-43fa-8401-1024d5ca1e00"}]},"hs_lastmodifieddate":{"value":"1659970158579","timestamp":1659970158579,"source":"CALCULATED","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1659970158579","timestamp":1659970158579,"sourceId":"1024781","source":"CALCULATED","sourceVid":[],"requestId":"8b8d7d75-548e-43fa-8401-1024d5ca1e00"}]},"domain":{"value":"parisian.com","timestamp":1659970158579,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"domain","value":"parisian.com","timestamp":1659970158579,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"8b8d7d75-548e-43fa-8401-1024d5ca1e00"}]},"name":{"value":"Bergstrom
+        and Sons","timestamp":1659970158579,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"name","value":"Bergstrom
+        and Sons","timestamp":1659970158579,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"8b8d7d75-548e-43fa-8401-1024d5ca1e00"}]},"hs_object_id":{"value":"9337706499","timestamp":1659970158579,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"hs_object_id","value":"9337706499","timestamp":1659970158579,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"8b8d7d75-548e-43fa-8401-1024d5ca1e00"}]},"createdate":{"value":"1659970158579","timestamp":1659970158579,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"createdate","value":"1659970158579","timestamp":1659970158579,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"8b8d7d75-548e-43fa-8401-1024d5ca1e00"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
+  recorded_at: Mon, 08 Aug 2022 14:49:19 GMT
+recorded_with: VCR 6.0.0

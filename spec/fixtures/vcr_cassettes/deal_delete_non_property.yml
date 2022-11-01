@@ -2,32 +2,75 @@
 http_interactions:
 - request:
     method: delete
-    uri: https://api.hubapi.com/deals/v1/properties/named/my_new_property?hapikey=demo
+    uri: https://api.hubapi.com/deals/v1/properties/named/i_do_not_exist
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 404
       message: Not Found
     headers:
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Content-Type:
-      - application/json; charset=UTF-8
-      X-Hubspot-Notfound:
-      - 'true'
-      Content-Length:
-      - '199'
       Date:
-      - Tue, 05 Jan 2016 22:51:39 GMT
+      - Mon, 08 Aug 2022 14:51:15 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
+      Cf-Ray:
+      - 737911af8fec99f1-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - bb245bd8-71ad-4c47-a9ed-372d9c5b6c6a
+      X-Hubspot-Notfound:
+      - 'true'
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '248303'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '81'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '8'
+      X-Trace:
+      - 2B5133E77D4C4E7A699EA82E61C30F31FB4E9F404C000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=4uksAGbJbtckUm04sOxh9rFEXJivkSTsHCqVZ%2FgSGJk%2F1ymTqe5dY7I7Pcay%2BFIGg%2FT791vWVZuwXnXXp%2FKu6PYCcAsXp0WEp9bFzKuxnNaye14h1FzFGSEwUXdDNVMXZaYH3hYIwvT4VnM5"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '{"status":"error","message":"Couldn''t find a Property with the given
-        name ''my_new_property''","correlationId":"74a854fa-b3a6-48ff-b4f4-1d8633407e0b","requestId":"1e67ba24-3f95-4dff-a57f-523f74f17c44"}'
-    http_version: 
-  recorded_at: Tue, 05 Jan 2016 22:51:39 GMT
-recorded_with: VCR 2.4.0
+        name ''i_do_not_exist''","correlationId":"bb245bd8-71ad-4c47-a9ed-372d9c5b6c6a","propertiesErrorCode":"PROPERTY_NOT_FOUND"}'
+  recorded_at: Mon, 08 Aug 2022 14:51:16 GMT
+recorded_with: VCR 6.0.0

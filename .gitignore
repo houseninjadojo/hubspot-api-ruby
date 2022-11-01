@@ -13,7 +13,6 @@ doc
 .bundle
 
 Gemfile.lock
-gemfiles/*.lock
 
 # Have editor/IDE/OS specific files you need to ignore? Consider using a global gitignore:
 #
@@ -52,7 +51,7 @@ tmp
 *.sublime-workspace
 
 # Ignore local environment variables
-/.env
+/.env*
 
 # Byebug history
 .byebug_history

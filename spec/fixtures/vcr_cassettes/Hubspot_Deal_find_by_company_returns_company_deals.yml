@@ -2,238 +2,286 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.hubapi.com/companies/v2/companies/?hapikey=demo
+    uri: https://api.hubapi.com/companies/v2/companies/
     body:
       encoding: UTF-8
-      string: '{"properties":[{"name":"name","value":"Wunsch-Keebler"},{"name":"domain","value":"pouroscasper.com"}]}'
+      string: '{"properties":[{"name":"name","value":"6b19bdb9fca2c36056574fbf204960ea"}]}'
     headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
       Content-Type:
       - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Thu, 21 Nov 2019 12:57:55 GMT
-      Content-Type:
-      - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Set-Cookie:
-      - __cfduid=redacted; expires=Sat, 21-Dec-19
-        12:57:54 GMT; path=/; domain=.hubapi.com; HttpOnly
-      X-Trace:
-      - redacted
-      X-Hubspot-Ratelimit-Daily:
-      - '250000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '249795'
-      X-Hubspot-Ratelimit-Interval-Milliseconds:
-      - '10000'
-      X-Hubspot-Ratelimit-Remaining:
-      - '99'
-      X-Hubspot-Ratelimit-Max:
-      - '100'
-      X-Hubspot-Ratelimit-Secondly:
-      - '10'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '9'
-      Vary:
-      - Accept-Encoding
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Cf-Cache-Status:
-      - DYNAMIC
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-      Server:
-      - cloudflare
-      Cf-Ray:
-      - 5392d5059bc8edc7-CDG
-    body:
-      encoding: UTF-8
-      string: '{"portalId":62515,"companyId":2613286304,"isDeleted":false,"properties":{"website":{"value":"pouroscasper.com","timestamp":1574341074897,"source":"CALCULATED","sourceId":null,"versions":[{"name":"website","value":"pouroscasper.com","timestamp":1574341074897,"source":"CALCULATED","sourceVid":[],"requestId":"d0cd4893-cca7-41c2-a29a-5ad819287f92"}]},"hs_lastmodifieddate":{"value":"1574341074897","timestamp":1574341074897,"source":"CALCULATED","sourceId":"d0cd4893-cca7-41c2-a29a-5ad819287f92","versions":[{"name":"hs_lastmodifieddate","value":"1574341074897","timestamp":1574341074897,"sourceId":"d0cd4893-cca7-41c2-a29a-5ad819287f92","source":"CALCULATED","sourceVid":[],"requestId":"d0cd4893-cca7-41c2-a29a-5ad819287f92"}]},"domain":{"value":"pouroscasper.com","timestamp":1574341074897,"source":"API","sourceId":"d0cd4893-cca7-41c2-a29a-5ad819287f92","versions":[{"name":"domain","value":"pouroscasper.com","timestamp":1574341074897,"sourceId":"d0cd4893-cca7-41c2-a29a-5ad819287f92","source":"API","sourceVid":[],"requestId":"d0cd4893-cca7-41c2-a29a-5ad819287f92"}]},"hs_object_id":{"value":"2613286304","timestamp":1574341074897,"source":"API","sourceId":"d0cd4893-cca7-41c2-a29a-5ad819287f92","versions":[{"name":"hs_object_id","value":"2613286304","timestamp":1574341074897,"sourceId":"d0cd4893-cca7-41c2-a29a-5ad819287f92","source":"API","sourceVid":[],"requestId":"d0cd4893-cca7-41c2-a29a-5ad819287f92"}]},"name":{"value":"Wunsch-Keebler","timestamp":1574341074897,"source":"API","sourceId":"d0cd4893-cca7-41c2-a29a-5ad819287f92","versions":[{"name":"name","value":"Wunsch-Keebler","timestamp":1574341074897,"sourceId":"d0cd4893-cca7-41c2-a29a-5ad819287f92","source":"API","sourceVid":[],"requestId":"d0cd4893-cca7-41c2-a29a-5ad819287f92"}]},"createdate":{"value":"1574341074897","timestamp":1574341074897,"source":"API","sourceId":"d0cd4893-cca7-41c2-a29a-5ad819287f92","versions":[{"name":"createdate","value":"1574341074897","timestamp":1574341074897,"sourceId":"d0cd4893-cca7-41c2-a29a-5ad819287f92","source":"API","sourceVid":[],"requestId":"d0cd4893-cca7-41c2-a29a-5ad819287f92"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
-    http_version:
-  recorded_at: Thu, 21 Nov 2019 12:57:55 GMT
-- request:
-    method: post
-    uri: https://api.hubapi.com/deals/v1/deal?hapikey=demo
-    body:
-      encoding: UTF-8
-      string: '{"portalId":62515,"associations":{"associatedCompanyIds":[2613286304],"associatedVids":[]},"properties":[{"name":"amount","value":"30"}]}'
-    headers:
-      Content-Type:
-      - application/json
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Thu, 21 Nov 2019 12:57:55 GMT
-      Content-Type:
-      - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Set-Cookie:
-      - __cfduid=redacted; expires=Sat, 21-Dec-19
-        12:57:55 GMT; path=/; domain=.hubapi.com; HttpOnly
-      X-Trace:
-      - redacted
-      X-Hubspot-Ratelimit-Daily:
-      - '250000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '249794'
-      X-Hubspot-Ratelimit-Interval-Milliseconds:
-      - '10000'
-      X-Hubspot-Ratelimit-Remaining:
-      - '98'
-      X-Hubspot-Ratelimit-Max:
-      - '100'
-      X-Hubspot-Ratelimit-Secondly:
-      - '10'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '9'
-      Vary:
-      - Accept-Encoding
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Cf-Cache-Status:
-      - DYNAMIC
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-      Server:
-      - cloudflare
-      Cf-Ray:
-      - 5392d5085d8c3bcd-CDG
-    body:
-      encoding: UTF-8
-      string: '{"portalId":62515,"dealId":1191512073,"isDeleted":false,"associations":{"associatedVids":[],"associatedCompanyIds":[2613286304],"associatedDealIds":[],"associatedTicketIds":[]},"properties":{"hs_closed_amount_in_home_currency":{"value":"0","timestamp":1574341075347,"source":"CALCULATED","sourceId":null,"versions":[{"name":"hs_closed_amount_in_home_currency","value":"0","timestamp":1574341075347,"source":"CALCULATED","sourceVid":[],"sourceMetadata":""}]},"amount":{"value":"30","timestamp":1574341075347,"source":"API","sourceId":null,"versions":[{"name":"amount","value":"30","timestamp":1574341075347,"source":"API","sourceVid":[]}]},"hs_closed_amount":{"value":"0","timestamp":1574341075347,"source":"CALCULATED","sourceId":null,"versions":[{"name":"hs_closed_amount","value":"0","timestamp":1574341075347,"source":"CALCULATED","sourceVid":[],"sourceMetadata":""}]},"hs_lastmodifieddate":{"value":"1574341075347","timestamp":1574341075347,"source":"CALCULATED","sourceId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1574341075347","timestamp":1574341075347,"source":"CALCULATED","sourceVid":[]}]},"hs_createdate":{"value":"1574341075347","timestamp":1574341075347,"source":"API","sourceId":"","versions":[{"name":"hs_createdate","value":"1574341075347","timestamp":1574341075347,"sourceId":"","source":"API","sourceVid":[]}]},"hs_object_id":{"value":"1191512073","timestamp":1574341075347,"source":"API","sourceId":null,"versions":[{"name":"hs_object_id","value":"1191512073","timestamp":1574341075347,"source":"API","sourceVid":[]}]},"createdate":{"value":"1574341075347","timestamp":1574341075347,"source":"API","sourceId":null,"versions":[{"name":"createdate","value":"1574341075347","timestamp":1574341075347,"source":"API","sourceVid":[]}]},"hs_projected_amount":{"value":"0","timestamp":1574341075347,"source":"CALCULATED","sourceId":null,"versions":[{"name":"hs_projected_amount","value":"0","timestamp":1574341075347,"source":"CALCULATED","sourceVid":[],"sourceMetadata":""}]},"amount_in_home_currency":{"value":"30","timestamp":1574341075347,"source":"CALCULATED","sourceId":null,"versions":[{"name":"amount_in_home_currency","value":"30","timestamp":1574341075347,"source":"CALCULATED","sourceVid":[],"sourceMetadata":""}]},"hs_deal_stage_probability":{"value":"0","timestamp":1574341075347,"source":"CALCULATED","sourceId":null,"versions":[{"name":"hs_deal_stage_probability","value":"0","timestamp":1574341075347,"source":"CALCULATED","sourceVid":[],"sourceMetadata":""}]},"days_to_close":{"value":"0","timestamp":1574341075347,"source":"CALCULATED","sourceId":null,"versions":[{"name":"days_to_close","value":"0","timestamp":1574341075347,"source":"CALCULATED","sourceVid":[],"sourceMetadata":""}]},"hs_projected_amount_in_home_currency":{"value":"0","timestamp":1574341075347,"source":"CALCULATED","sourceId":null,"versions":[{"name":"hs_projected_amount_in_home_currency","value":"0","timestamp":1574341075347,"source":"CALCULATED","sourceVid":[],"sourceMetadata":""}]}},"imports":[],"stateChanges":[]}'
-    http_version:
-  recorded_at: Thu, 21 Nov 2019 12:57:55 GMT
-- request:
-    method: get
-    uri: https://api.hubapi.com/crm-associations/v1/associations/2613286304/HUBSPOT_DEFINED/6?hapikey=demo&limit=25&offset=
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers: {}
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Thu, 21 Nov 2019 12:57:55 GMT
+      - Mon, 08 Aug 2022 14:51:42 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '60'
+      - '397'
       Connection:
       - keep-alive
-      Set-Cookie:
-      - __cfduid=redacted; expires=Sat, 21-Dec-19
-        12:57:55 GMT; path=/; domain=.hubapi.com; HttpOnly
-      X-Trace:
-      - redacted
+      Cf-Ray:
+      - 737912539b223b2b-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - dc19153a-718b-4d87-b2a0-d7344767cc3f
       X-Hubspot-Ratelimit-Daily:
       - '250000'
       X-Hubspot-Ratelimit-Daily-Remaining:
-      - '249793'
+      - '248248'
       X-Hubspot-Ratelimit-Interval-Milliseconds:
       - '10000'
-      X-Hubspot-Ratelimit-Remaining:
-      - '97'
       X-Hubspot-Ratelimit-Max:
       - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '82'
       X-Hubspot-Ratelimit-Secondly:
       - '10'
       X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '9'
-      Vary:
-      - Accept-Encoding
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Cf-Cache-Status:
-      - DYNAMIC
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      - '8'
+      X-Trace:
+      - 2BB914093CCB11B12D9D689CCAB0601DFB0CA77756000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=uSCPdLQbtKe5e4qMmq9%2BCYPPveCy0c6JpQrXhah%2B9J1dwlwdYUClAtZQSwnxu3H05NGNXJ7OPbKcdP0d6Szt3xJGpR%2BF23xH9Dmc1ye5%2FIVG8aOYg0KhYBr3%2Ba4IcV%2FRG2QH%2FZsrzBmZtze4"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Cf-Ray:
-      - 5392d50a9e74ee3b-CDG
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"portalId":<PORTAL_ID>,"companyId":9337408145,"isDeleted":false,"properties":{"hs_lastmodifieddate":{"value":"1659970302111","timestamp":1659970302111,"source":"CALCULATED","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1659970302111","timestamp":1659970302111,"sourceId":"1024781","source":"CALCULATED","sourceVid":[],"requestId":"dc19153a-718b-4d87-b2a0-d7344767cc3f"}]},"name":{"value":"6b19bdb9fca2c36056574fbf204960ea","timestamp":1659970302111,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"name","value":"6b19bdb9fca2c36056574fbf204960ea","timestamp":1659970302111,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"dc19153a-718b-4d87-b2a0-d7344767cc3f"}]},"hs_object_id":{"value":"9337408145","timestamp":1659970302111,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"hs_object_id","value":"9337408145","timestamp":1659970302111,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"dc19153a-718b-4d87-b2a0-d7344767cc3f"}]},"createdate":{"value":"1659970302111","timestamp":1659970302111,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"createdate","value":"1659970302111","timestamp":1659970302111,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"dc19153a-718b-4d87-b2a0-d7344767cc3f"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
+  recorded_at: Mon, 08 Aug 2022 14:51:42 GMT
+- request:
+    method: post
+    uri: https://api.hubapi.com/deals/v1/deal
     body:
       encoding: UTF-8
-      string: '{"results":[1191512073],"hasMore":false,"offset":1191512073}'
-    http_version:
-  recorded_at: Thu, 21 Nov 2019 12:57:55 GMT
-- request:
-    method: get
-    uri: https://api.hubapi.com/deals/v1/deal/1191512073?hapikey=demo
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers: {}
+      string: '{"portalId":<PORTAL_ID>,"associations":{"associatedCompanyIds":[9337408145],"associatedVids":[]},"properties":[{"name":"amount","value":"30"}]}'
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Thu, 21 Nov 2019 12:57:56 GMT
+      - Mon, 08 Aug 2022 14:51:42 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '621'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 737912559b8799a2-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 587f14bf-7c88-483a-a567-4531ecc44397
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '248247'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '81'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '8'
+      X-Trace:
+      - 2B4DCF7195E2084164A9BFDEB6A34D47C356D24DBB000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Ho8%2BgdkOW4UOIfFeWnR1I9xtJE3IBEGJsJ9DTnQ7EFoNMNYDisak1pzOS2dqwzChyMJlvBPZAa0GajV%2FJrIp0ZQhrJfieZ9mI4DRDfaqxOQ5KHuiGsdCAyRRrUV%2B6DneBv0LfQbZQNZFQ7p7"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"portalId":<PORTAL_ID>,"dealId":9756411983,"isDeleted":false,"associations":{"associatedVids":[],"associatedCompanyIds":[9337408145],"associatedDealIds":[],"associatedTicketIds":[]},"properties":{"hs_closed_amount_in_home_currency":{"value":"0","timestamp":1659970302434,"source":"CALCULATED","sourceId":"CalculatedPropertyComputer","updatedByUserId":null,"versions":[{"name":"hs_closed_amount_in_home_currency","value":"0","timestamp":1659970302434,"sourceId":"CalculatedPropertyComputer","source":"CALCULATED","sourceVid":[]}]},"amount":{"value":"30","timestamp":1659970302434,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"amount","value":"30","timestamp":1659970302434,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"587f14bf-7c88-483a-a567-4531ecc44397"}]},"hs_is_closed_won":{"value":"false","timestamp":1659970302434,"source":"CALCULATED","sourceId":"CalculatedPropertyComputer","updatedByUserId":null,"versions":[{"name":"hs_is_closed_won","value":"false","timestamp":1659970302434,"sourceId":"CalculatedPropertyComputer","source":"CALCULATED","sourceVid":[]}]},"hs_forecast_amount":{"value":"30","timestamp":1659970302434,"source":"CALCULATED","sourceId":"CalculatedPropertyComputer","updatedByUserId":null,"versions":[{"name":"hs_forecast_amount","value":"30","timestamp":1659970302434,"sourceId":"CalculatedPropertyComputer","source":"CALCULATED","sourceVid":[]}]},"createdate":{"value":"1659970302434","timestamp":1659970302434,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"createdate","value":"1659970302434","timestamp":1659970302434,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"587f14bf-7c88-483a-a567-4531ecc44397"}]},"amount_in_home_currency":{"value":"30","timestamp":1659970302434,"source":"CALCULATED","sourceId":"CalculatedPropertyComputer","updatedByUserId":null,"versions":[{"name":"amount_in_home_currency","value":"30","timestamp":1659970302434,"sourceId":"CalculatedPropertyComputer","source":"CALCULATED","sourceVid":[]}]},"days_to_close":{"value":"0","timestamp":1659970302434,"source":"CALCULATED","sourceId":"CalculatedPropertyComputer","updatedByUserId":null,"versions":[{"name":"days_to_close","value":"0","timestamp":1659970302434,"sourceId":"CalculatedPropertyComputer","source":"CALCULATED","sourceVid":[]}]},"hs_deal_stage_probability_shadow":{"value":"0","timestamp":1659970302434,"source":"CALCULATED","sourceId":"CalculatedPropertyComputer","updatedByUserId":null,"versions":[{"name":"hs_deal_stage_probability_shadow","value":"0","timestamp":1659970302434,"sourceId":"CalculatedPropertyComputer","source":"CALCULATED","sourceVid":[]}]},"hs_closed_amount":{"value":"0","timestamp":1659970302434,"source":"CALCULATED","sourceId":"CalculatedPropertyComputer","updatedByUserId":null,"versions":[{"name":"hs_closed_amount","value":"0","timestamp":1659970302434,"sourceId":"CalculatedPropertyComputer","source":"CALCULATED","sourceVid":[]}]},"hs_lastmodifieddate":{"value":"1659970302434","timestamp":1659970302434,"source":"CALCULATED","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1659970302434","timestamp":1659970302434,"sourceId":"1024781","source":"CALCULATED","sourceVid":[],"requestId":"587f14bf-7c88-483a-a567-4531ecc44397"}]},"hs_createdate":{"value":"1659970302434","timestamp":1659970302434,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"hs_createdate","value":"1659970302434","timestamp":1659970302434,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"587f14bf-7c88-483a-a567-4531ecc44397"}]},"hs_object_id":{"value":"9756411983","timestamp":1659970302434,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"hs_object_id","value":"9756411983","timestamp":1659970302434,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"587f14bf-7c88-483a-a567-4531ecc44397"}]},"hs_projected_amount":{"value":"0","timestamp":1659970302434,"source":"CALCULATED","sourceId":"CalculatedPropertyComputer","updatedByUserId":null,"versions":[{"name":"hs_projected_amount","value":"0","timestamp":1659970302434,"sourceId":"CalculatedPropertyComputer","source":"CALCULATED","sourceVid":[]}]},"hs_is_deal_split":{"value":"false","timestamp":1659970302434,"source":"CALCULATED","sourceId":"CalculatedPropertyComputer","updatedByUserId":null,"versions":[{"name":"hs_is_deal_split","value":"false","timestamp":1659970302434,"sourceId":"CalculatedPropertyComputer","source":"CALCULATED","sourceVid":[]}]},"hs_projected_amount_in_home_currency":{"value":"0","timestamp":1659970302434,"source":"CALCULATED","sourceId":"CalculatedPropertyComputer","updatedByUserId":null,"versions":[{"name":"hs_projected_amount_in_home_currency","value":"0","timestamp":1659970302434,"sourceId":"CalculatedPropertyComputer","source":"CALCULATED","sourceVid":[]}]}},"stateChanges":[]}'
+  recorded_at: Mon, 08 Aug 2022 14:51:42 GMT
+- request:
+    method: get
+    uri: https://api.hubapi.com/crm/v4/objects/Company/9337408145/associations/Deal
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 08 Aug 2022 14:51:42 GMT
       Content-Type:
       - application/json;charset=utf-8
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
-      Set-Cookie:
-      - __cfduid=redacted; expires=Sat, 21-Dec-19
-        12:57:55 GMT; path=/; domain=.hubapi.com; HttpOnly
-      X-Trace:
-      - redacted
+      Cf-Ray:
+      - 73791257cd6b99d9-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - c385ba44-0688-4903-ba84-6ce8216ab3af
       X-Hubspot-Ratelimit-Daily:
       - '250000'
       X-Hubspot-Ratelimit-Daily-Remaining:
-      - '249792'
+      - '248246'
       X-Hubspot-Ratelimit-Interval-Milliseconds:
       - '10000'
-      X-Hubspot-Ratelimit-Remaining:
-      - '96'
       X-Hubspot-Ratelimit-Max:
       - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '80'
       X-Hubspot-Ratelimit-Secondly:
       - '10'
       X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '9'
-      Vary:
-      - Accept-Encoding
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Cf-Cache-Status:
-      - DYNAMIC
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      - '8'
+      X-Trace:
+      - 2B3E1B0BAAD6A91E62B7A836690E66B16594828FE5000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=KmPU%2FBMhWQM%2Fx6sPQ9cttotCua%2Fn5ghMMDQZRIp9y%2FJ%2BE8B9q14AhcXKpRf0983sYrr7fEOFlwieIdbrjZLzFC1GQuAsLhA96YviuOODouQOAAR8xfFHXsb08nvgzws%2B0re3sRom12%2F%2FWn91"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Cf-Ray:
-      - 5392d50cafd2a879-CDG
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '{"portalId":62515,"dealId":1191512073,"isDeleted":false,"associations":{"associatedVids":[],"associatedCompanyIds":[2613286304],"associatedDealIds":[],"associatedTicketIds":[]},"properties":{"hs_closed_amount_in_home_currency":{"value":"0","timestamp":1574341075347,"source":"CALCULATED","sourceId":null,"versions":[{"name":"hs_closed_amount_in_home_currency","value":"0","timestamp":1574341075347,"source":"CALCULATED","sourceVid":[],"sourceMetadata":""}]},"amount":{"value":"30","timestamp":1574341075347,"source":"API","sourceId":null,"versions":[{"name":"amount","value":"30","timestamp":1574341075347,"source":"API","sourceVid":[]}]},"num_associated_contacts":{"value":"0","timestamp":1574341075849,"source":"CALCULATED","sourceId":"RollupProperties","versions":[{"name":"num_associated_contacts","value":"0","timestamp":1574341075849,"sourceId":"RollupProperties","source":"CALCULATED","sourceVid":[]}]},"createdate":{"value":"1574341075347","timestamp":1574341075347,"source":"API","sourceId":null,"versions":[{"name":"createdate","value":"1574341075347","timestamp":1574341075347,"source":"API","sourceVid":[]}]},"amount_in_home_currency":{"value":"30","timestamp":1574341075347,"source":"CALCULATED","sourceId":null,"versions":[{"name":"amount_in_home_currency","value":"30","timestamp":1574341075347,"source":"CALCULATED","sourceVid":[],"sourceMetadata":""}]},"hs_deal_stage_probability":{"value":"0","timestamp":1574341075347,"source":"CALCULATED","sourceId":null,"versions":[{"name":"hs_deal_stage_probability","value":"0","timestamp":1574341075347,"source":"CALCULATED","sourceVid":[],"sourceMetadata":""}]},"days_to_close":{"value":"0","timestamp":1574341075347,"source":"CALCULATED","sourceId":null,"versions":[{"name":"days_to_close","value":"0","timestamp":1574341075347,"source":"CALCULATED","sourceVid":[],"sourceMetadata":""}]},"hs_closed_amount":{"value":"0","timestamp":1574341075347,"source":"CALCULATED","sourceId":null,"versions":[{"name":"hs_closed_amount","value":"0","timestamp":1574341075347,"source":"CALCULATED","sourceVid":[],"sourceMetadata":""}]},"hs_lastmodifieddate":{"value":"1574341075880","timestamp":1574341075880,"source":"CALCULATED","sourceId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1574341075880","timestamp":1574341075880,"source":"CALCULATED","sourceVid":[]}]},"hs_createdate":{"value":"1574341075347","timestamp":1574341075347,"source":"API","sourceId":"","versions":[{"name":"hs_createdate","value":"1574341075347","timestamp":1574341075347,"sourceId":"","source":"API","sourceVid":[]}]},"hs_object_id":{"value":"1191512073","timestamp":1574341075347,"source":"API","sourceId":null,"versions":[{"name":"hs_object_id","value":"1191512073","timestamp":1574341075347,"source":"API","sourceVid":[]}]},"hs_projected_amount":{"value":"0","timestamp":1574341075347,"source":"CALCULATED","sourceId":null,"versions":[{"name":"hs_projected_amount","value":"0","timestamp":1574341075347,"source":"CALCULATED","sourceVid":[],"sourceMetadata":""}]},"hs_projected_amount_in_home_currency":{"value":"0","timestamp":1574341075347,"source":"CALCULATED","sourceId":null,"versions":[{"name":"hs_projected_amount_in_home_currency","value":"0","timestamp":1574341075347,"source":"CALCULATED","sourceVid":[],"sourceMetadata":""}]}},"imports":[],"stateChanges":[]}'
-    http_version:
-  recorded_at: Thu, 21 Nov 2019 12:57:56 GMT
-recorded_with: VCR 5.0.0
+      encoding: ASCII-8BIT
+      string: '{"results":[{"toObjectId":9756411983,"associationTypes":[{"category":"HUBSPOT_DEFINED","typeId":342,"label":null}]}]}'
+  recorded_at: Mon, 08 Aug 2022 14:51:43 GMT
+- request:
+    method: get
+    uri: https://api.hubapi.com/deals/v1/deal/9756411983
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 08 Aug 2022 14:51:43 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '615'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 7379125a583299f1-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 83e0ffb3-47ea-42f0-a28f-d0cd810b6771
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '248245'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '80'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '8'
+      X-Trace:
+      - 2B0B6F8B4F85777491C5F3B39CEBB266E8D71B74D3000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=SAhYVmyepYDJwJhUELOBg7rUs8WUA6zVSrpE63JdAuUj9sx9QdPDBmvDnE5SzRpE9AJ2JlpoES2dMoX6lxDAFnZYVCfZR5IlfKBc8PfciESgRuoACF2bmD2hDUcAEkHscrzu%2FjYtenIlpbhz"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"portalId":<PORTAL_ID>,"dealId":9756411983,"isDeleted":false,"associations":{"associatedVids":[],"associatedCompanyIds":[9337408145],"associatedDealIds":[],"associatedTicketIds":[]},"properties":{"hs_closed_amount_in_home_currency":{"value":"0","timestamp":1659970302434,"source":"CALCULATED","sourceId":"CalculatedPropertyComputer","updatedByUserId":null,"versions":[{"name":"hs_closed_amount_in_home_currency","value":"0","timestamp":1659970302434,"sourceId":"CalculatedPropertyComputer","source":"CALCULATED","sourceVid":[]}]},"hs_is_closed_won":{"value":"false","timestamp":1659970302434,"source":"CALCULATED","sourceId":"CalculatedPropertyComputer","updatedByUserId":null,"versions":[{"name":"hs_is_closed_won","value":"false","timestamp":1659970302434,"sourceId":"CalculatedPropertyComputer","source":"CALCULATED","sourceVid":[]}]},"amount":{"value":"30","timestamp":1659970302434,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"amount","value":"30","timestamp":1659970302434,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"587f14bf-7c88-483a-a567-4531ecc44397"}]},"hs_forecast_amount":{"value":"30","timestamp":1659970302434,"source":"CALCULATED","sourceId":"CalculatedPropertyComputer","updatedByUserId":null,"versions":[{"name":"hs_forecast_amount","value":"30","timestamp":1659970302434,"sourceId":"CalculatedPropertyComputer","source":"CALCULATED","sourceVid":[]}]},"createdate":{"value":"1659970302434","timestamp":1659970302434,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"createdate","value":"1659970302434","timestamp":1659970302434,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"587f14bf-7c88-483a-a567-4531ecc44397"}]},"amount_in_home_currency":{"value":"30","timestamp":1659970302434,"source":"CALCULATED","sourceId":"CalculatedPropertyComputer","updatedByUserId":null,"versions":[{"name":"amount_in_home_currency","value":"30","timestamp":1659970302434,"sourceId":"CalculatedPropertyComputer","source":"CALCULATED","sourceVid":[]}]},"days_to_close":{"value":"0","timestamp":1659970302434,"source":"CALCULATED","sourceId":"CalculatedPropertyComputer","updatedByUserId":null,"versions":[{"name":"days_to_close","value":"0","timestamp":1659970302434,"sourceId":"CalculatedPropertyComputer","source":"CALCULATED","sourceVid":[]}]},"hs_deal_stage_probability_shadow":{"value":"0","timestamp":1659970302434,"source":"CALCULATED","sourceId":"CalculatedPropertyComputer","updatedByUserId":null,"versions":[{"name":"hs_deal_stage_probability_shadow","value":"0","timestamp":1659970302434,"sourceId":"CalculatedPropertyComputer","source":"CALCULATED","sourceVid":[]}]},"hs_closed_amount":{"value":"0","timestamp":1659970302434,"source":"CALCULATED","sourceId":"CalculatedPropertyComputer","updatedByUserId":null,"versions":[{"name":"hs_closed_amount","value":"0","timestamp":1659970302434,"sourceId":"CalculatedPropertyComputer","source":"CALCULATED","sourceVid":[]}]},"hs_lastmodifieddate":{"value":"1659970302434","timestamp":1659970302434,"source":"CALCULATED","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1659970302434","timestamp":1659970302434,"sourceId":"1024781","source":"CALCULATED","sourceVid":[],"requestId":"587f14bf-7c88-483a-a567-4531ecc44397"}]},"hs_createdate":{"value":"1659970302434","timestamp":1659970302434,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"hs_createdate","value":"1659970302434","timestamp":1659970302434,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"587f14bf-7c88-483a-a567-4531ecc44397"}]},"hs_object_id":{"value":"9756411983","timestamp":1659970302434,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"hs_object_id","value":"9756411983","timestamp":1659970302434,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"587f14bf-7c88-483a-a567-4531ecc44397"}]},"hs_projected_amount":{"value":"0","timestamp":1659970302434,"source":"CALCULATED","sourceId":"CalculatedPropertyComputer","updatedByUserId":null,"versions":[{"name":"hs_projected_amount","value":"0","timestamp":1659970302434,"sourceId":"CalculatedPropertyComputer","source":"CALCULATED","sourceVid":[]}]},"hs_is_deal_split":{"value":"false","timestamp":1659970302434,"source":"CALCULATED","sourceId":"CalculatedPropertyComputer","updatedByUserId":null,"versions":[{"name":"hs_is_deal_split","value":"false","timestamp":1659970302434,"sourceId":"CalculatedPropertyComputer","source":"CALCULATED","sourceVid":[]}]},"hs_projected_amount_in_home_currency":{"value":"0","timestamp":1659970302434,"source":"CALCULATED","sourceId":"CalculatedPropertyComputer","updatedByUserId":null,"versions":[{"name":"hs_projected_amount_in_home_currency","value":"0","timestamp":1659970302434,"sourceId":"CalculatedPropertyComputer","source":"CALCULATED","sourceVid":[]}]}},"stateChanges":[]}'
+  recorded_at: Mon, 08 Aug 2022 14:51:43 GMT
+recorded_with: VCR 6.0.0

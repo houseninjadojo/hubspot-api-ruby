@@ -1,10 +1,16 @@
 # HubSpot REST API wrappers for ruby
 
-**This is the master branch and contains unreleased and potentially breaking changes. If you are looking for the most recent stable release you want the [v0-stable branch](https://github.com/adimichele/hubspot-ruby/tree/v0-stable).**
-
 Wraps the HubSpot REST API for convenient access from ruby applications.
 
 Documentation for the HubSpot REST API can be found here: https://developers.hubspot.com/docs/endpoints
+
+## Disclaimer
+
+This gem is a fork of the unofficial [hubspot-ruby](https://github.com/HubspotCommunity/hubspot-ruby) gem which is unfortunately not maintained anymore.
+
+The API has evolved quite a bit and while this is not a drop-in replacement you should feel familiar if you come from `hubspot-ruby`.
+
+This project and the code therein was not created by and is not supported by HubSpot, Inc or any of its affiliates.
 
 ## Setup
 
@@ -24,16 +30,17 @@ Authentication docs].
 Below is a complete list of configuration options with the default values:
 ```ruby
 Hubspot.configure({
-  hapikey: <HAPIKEY>,
+  access_token: <ACCESS_TOKEN>,
   base_url: "https://api.hubapi.com",
   portal_id: <PORTAL_ID>,
   logger: Logger.new(nil),
-  access_token: <ACCESS_TOKEN>,
   client_id: <CLIENT_ID>,
   client_secret: <CLIENT_SECRET>,
   redirect_uri: <REDIRECT_URI>,
-  read_timeout: nil, # or :timeout to set read_timeout and open_timeout
+  read_timeout: nil,
   open_timeout: nil,
+  # read_timeout and open_timeout are expressed in seconds and passed to HTTParty
+  hapikey: <HAPIKEY>,
 })
 ```
 
@@ -44,15 +51,20 @@ environment.
 [HubSpot API Authentication Docs]: https://developers.hubspot.com/docs/methods/auth/oauth-overview
 [HubSpot Developer Tools]: https://developers.hubspot.com/docs/devtools
 
-## Authentication with an API key
+## Authentication with a private app access token
 
-To set the HubSpot API key, aka `hapikey`, run the following:
+To set the HubSpot access token, run the following:
 ```ruby
-Hubspot.configure(hapikey: "YOUR_API_KEY")
+Hubspot.configure(access_token: 'YOUR_ACCESS_TOKEN')
 ```
 
-If you have a HubSpot account, you can find your API key by logging in and
-visiting: https://app.hubspot.com/keys/get
+Note: some APIs require the portal ID to be set.
+
+```ruby
+Hubspot.configure(access_token: 'YOUR_ACCESS_TOKEN', portal_id: 'YOUR_PORTAL_ID')
+```
+
+[To learn how to create and manage private apps and access tokens, click here.](https://developers.hubspot.com/docs/api/private-apps)
 
 ## Authentication with OAuth 2.0
 
@@ -105,6 +117,18 @@ Hubspot::OAuth.refresh(refresh_token)
 
 At this time, OAuth tokens are configured globally rather than on a per-connection basis.
 
+## Authentication with an API key
+
+NOTE: API keys are deprecated. [Read more here](https://developers.hubspot.com/changelog/upcoming-api-key-sunset) and [find out how to migrate to private apps there](https://developers.hubspot.com/docs/api/migrate-an-api-key-integration-to-a-private-app).
+
+To set the HubSpot API key, aka `hapikey`, run the following:
+```ruby
+Hubspot.configure(hapikey: "YOUR_API_KEY")
+```
+
+If you have a HubSpot account, you can find your API key by logging in and
+visiting: https://app.hubspot.com/keys/get
+
 ## Usage
 
 Classes have been created that map to Hubspot resource types and attempt to abstract away as much of the API specific details as possible. These classes generally follow the [ActiveRecord](https://en.wikipedia.org/wiki/Active_record_pattern) pattern and general Ruby conventions. Anyone familiar with [Ruby On Rails](https://rubyonrails.org/) should find this API closely maps with familiar concepts.
@@ -141,15 +165,19 @@ By default, the VCR recording mode is set to `:none`, which allows recorded
 requests to be re-played but raises for any new request. This prevents the test
 suite from issuing unexpected HTTP requests.
 
-To add a new test or update a VCR recording, run the test with the `VCR_RECORD`
-environment variable:
+Some requests require to be done on a live hubspot portal, you can set the `HUBSPOT_ACCESS_TOKEN` and `HUBSPOT_PORTAL_ID` environement variables, for example inside a `.env.test` file :
+
+```
+HUBSPOT_ACCESS_TOKEN=xxxx
+HUBSPOT_PORTAL_ID=yyyy
+HUBSPOT_HAPI_KEY=zzzz
+```
+
+To add a new test or update a VCR recording, run the test with the `VCR_RECORD_MODE`
+environment variable, for instance:
 
 ```sh
-VCR_RECORD=1 bundle exec rspec spec
+VCR_RECORD_MODE=new_episodes bundle exec rspec spec
 ```
 
 [VCR]: https://github.com/vcr/vcr
-
-## Disclaimer
-
-This project and the code therein was not created by and is not supported by HubSpot, Inc or any of its affiliates.

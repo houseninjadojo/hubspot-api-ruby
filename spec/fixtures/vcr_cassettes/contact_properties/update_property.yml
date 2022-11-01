@@ -2,36 +2,77 @@
 http_interactions:
 - request:
     method: put
-    uri: https://api.hubapi.com/properties/v1/contacts/properties/named/my_new_property?hapikey=demo
+    uri: https://api.hubapi.com/properties/v1/contacts/properties/named/my_new_property
     body:
       encoding: UTF-8
       string: '{"name":"my_new_property","groupName":"contactinformation","description":"What
         is their favorite flavor?","fieldType":"text","formField":true,"type":"string","displayOrder":0,"label":"This
         is my new property","options":[]}'
     headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
       Content-Type:
       - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Content-Type:
-      - application/json; charset=UTF-8
-      Vary:
-      - Accept-Encoding
-      - Accept-Encoding
-      Content-Length:
-      - '397'
       Date:
-      - Tue, 05 Jan 2016 22:51:32 GMT
+      - Mon, 08 Aug 2022 14:50:36 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '453'
       Connection:
       - keep-alive
+      Cf-Ray:
+      - 737910b8ca663a87-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 55d15da8-87e2-4dd1-9cdd-463cbe1622d2
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '248379'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '82'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '8'
+      X-Trace:
+      - 2BE689F613183F499CDE154E9DB775847D2C416807000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=YVoon6n3mdcu1QnM3mFb7OFSs4vPPSS%2BLgnzMGhUPF624NKD84DIp2WK8Bf5hpYjBcfuoHhOypmaJKHSgaowbWP9RSUw4dokAizSKsZHi%2F3woeKCGt7LBAFvqAMDKW6v%2BKOFTZ93%2Fk9qhkpM"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '{"name":"my_new_property","label":"This is my new property","description":"What
-        is their favorite flavor?","groupName":"contactinformation","type":"string","fieldType":"text","hidden":false,"options":[],"displayOrder":0,"formField":true,"readOnlyValue":false,"readOnlyDefinition":false,"mutableDefinitionNotDeletable":false,"calculated":false,"externalOptions":false,"displayMode":"current_value"}'
-    http_version: 
-  recorded_at: Tue, 05 Jan 2016 22:51:32 GMT
+        is their favorite flavor?","groupName":"contactinformation","type":"string","fieldType":"text","fieldLevelPermission":null,"options":[],"createdAt":null,"referencedObjectType":null,"externalOptionsReferenceType":null,"optionSortStrategy":null,"numberDisplayHint":null,"createdUserId":null,"searchableInGlobalSearch":false,"hasUniqueValue":false,"isCustomizedDefault":false,"optionsAreMutable":null,"searchTextAnalysisMode":null,"currencyPropertyName":null,"textDisplayHint":null,"updatedUserId":null,"hidden":false,"readOnlyValue":false,"mutableDefinitionNotDeletable":false,"favorited":false,"favoritedOrder":-1,"calculated":false,"externalOptions":false,"displayMode":"current_value","showCurrencySymbol":null,"hubspotDefined":null,"formField":true,"displayOrder":0,"readOnlyDefinition":false,"deleted":null,"updatedAt":null}'
+  recorded_at: Mon, 08 Aug 2022 14:50:36 GMT
+recorded_with: VCR 6.0.0
