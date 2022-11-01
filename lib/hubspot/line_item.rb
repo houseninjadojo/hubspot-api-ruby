@@ -16,6 +16,10 @@ module Hubspot
     UPDATE_PATH             = '/crm-objects/v1/objects/line_items/:id'
     # BATCH_UPDATE_PATH       = '/crm-objects/v1/objects/line_items/batch-update'
 
+    # @todo
+    # get properties
+    # &properties=name&properties=price&properties=quantity
+
     class << self
       def all(opts = {})
         Hubspot::PagedCollection.new(opts) do |options, offset, limit|
